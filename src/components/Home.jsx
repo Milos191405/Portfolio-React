@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <div name="home" className="w-full h-screen bg-[#0a192f]">
-        <div className="max-w-[1000px] mx-auto px-8  flex flex-col justify-center h-full text-white">
+        <div className="max-w-[1000px] mx-auto px-8  flex flex-col justify-center h-full text-white pt-16 sm:pt-0  md:pt-0 ">
           <p className="  text-blue-600">Hi, my name is </p>
           <h1 className=" text-4xl sm:text-7xl font-bold ">Milos Mirkovic</h1>
           <h2 className="text-4xl sm:text-4xl font-bold text-gray-500">

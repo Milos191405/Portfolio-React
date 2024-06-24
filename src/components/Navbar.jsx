@@ -36,11 +36,21 @@ function Navbar() {
               : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] text-gray-300 flex flex-col justify-center items-center"
           }
         >
-          <li className="text-3xl py-6  w-full text-center ">Home</li>
-          <li className="text-3xl py-6  w-full text-center ">About</li>
-          <li className="text-3xl py-6  w-full text-center ">Skills</li>
-          <li className="text-3xl py-6  w-full text-center ">Projects</li>
-          <li className="text-3xl py-6  w-full text-center ">Contact</li>
+          <li className="text-3xl py-6  w-3/4 text-center border-2 rounded-full hover:bg-white hover:text-gray-700 mb-2">
+            Home
+          </li>
+          <li className="text-3xl py-6  w-3/4 text-center border-2 rounded-full hover:bg-white hover:text-gray-700 mb-2">
+            About
+          </li>
+          <li className="text-3xl py-6  w-3/4 text-center border-2 rounded-full hover:bg-white hover:text-gray-700 mb-2">
+            Skills
+          </li>
+          <li className="text-3xl py-6  w-3/4 text-center border-2 rounded-full hover:bg-white hover:text-gray-700 mb-2">
+            Projects
+          </li>
+          <li className="text-3xl py-6  w-3/4 text-center border-2 rounded-full hover:bg-white hover:text-gray-700 mb-2">
+            Contact
+          </li>
         </ul>
       </div>
 
