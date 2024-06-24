@@ -1,15 +1,11 @@
-import React from "react";
-
 import HTML from "../assets/html.png";
 import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import ReactImg from "../assets/react.png";
 import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
-import Node from '../assets/node.png'
-import MongoDB from '../assets/mongo.png';
-
-
+import Node from "../assets/node.png";
+import MongoDB from "../assets/mongo.png";
 
 const Skills = () => {
   return (
@@ -17,7 +13,7 @@ const Skills = () => {
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full pt-32 sm:pt-0 md:pt-0">
         <div>
-          <p className="text-4xl font-bold inline border-b-4 border-blue-600 ">
+          <p className="text-4xl font-bold inline border-b-4 border-blue-600">
             Skills
           </p>
           <p className="py-4">These are the technologies I've worked with</p>
@@ -48,22 +44,18 @@ const Skills = () => {
             <img className="w-20 mx-auto" src={GitHub} alt="GitHub icon" />
             <p className="my-4">GITHUB</p>
           </div>
-
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={Tailwind} alt="Tailwind icon" />
             <p className="my-4">TAILWIND</p>
           </div>
-
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={Node} alt="Node icon" />
             <p className="my-4">NODE</p>
           </div>
-
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={MongoDB} alt="MongoDB icon" />
-            <p className="my-4">MongoDB</p>
+            <p className="my-4">MONGODB</p>
           </div>
-         
         </div>
       </div>
     </div>
