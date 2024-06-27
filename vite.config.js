@@ -6,4 +6,9 @@ export default defineConfig({
   server: {
     historyApiFallback: true,
   },
+  build: {
+    rollupOptions: {
+      input: "./index.html",
+    },
+  },
 });
