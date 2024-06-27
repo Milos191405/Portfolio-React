@@ -1,5 +1,8 @@
 import Forest from "../assets/Work/forest.jpg";
 import "./work.css";
+import excelConverter from '../assets/Work/excel-converter.png'
+import Portfolio from '../assets/Work/Portfolio version 1.png'
+import { PiOctagon } from "react-icons/pi";
 
 function Work() {
   return (
@@ -14,21 +17,24 @@ function Work() {
             Work
           </p>
           <p className="sm:text-lg md:text-xl lg:text-2xl  pt-4  ">
-            Check out some of my recent work
+            // Check out some of my recent work
           </p>
         </div>
 
         <section className="grid sm:grid-cols-1 md:grid-cols lg:grid-cols-2 gap-4">
           {/* First project  */}
-          <article className="" style={{ backgroundImage: `url(${Forest})` }}>
-            <div
-              style={{ backgroundImage: `url(${Forest})` }}
-              className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div  "
-            >
+          <article
+            style={{
+              backgroundImage: `url(${Portfolio})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div ">
               {/* Hover effects  */}
               <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
                 <span className="text-xl  font-bold text-gray-600 tracking-wider ">
-                  React Portfolio
+                  Portfolio, HTML and CSS
                 </span>
                 <div className="pt-8 text-center">
                   <a href="/">
@@ -36,7 +42,7 @@ function Work() {
                       Demo
                     </button>
                   </a>
-                  <a href="/">
+                  <a href="https://github.com/Milos191405/Portfolio">
                     <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
                       Code
                     </button>
@@ -47,15 +53,19 @@ function Work() {
           </article>
 
           {/* Second project  */}
-          <article className="" style={{ backgroundImage: `url(${Forest})` }}>
+          <article>
             <div
-              style={{ backgroundImage: `url(${Forest})` }}
+              style={{
+                backgroundImage: `url(${excelConverter})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
               className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div  "
             >
               {/* Hover effects  */}
               <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
                 <span className="text-xl  font-bold text-gray-600 tracking-wider ">
-                  React Portfolio
+                  Excel converter, JS
                 </span>
                 <div className="pt-8 text-center">
                   <a href="/">
@@ -63,7 +73,7 @@ function Work() {
                       Demo
                     </button>
                   </a>
-                  <a href="/">
+                  <a href="https://github.com/Milos191405/Excel-converter">
                     <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
                       Code
                     </button>
@@ -74,11 +84,8 @@ function Work() {
           </article>
 
           {/* Third project  */}
-          <article className="" style={{ backgroundImage: `url(${Forest})` }}>
-            <div
-              style={{ backgroundImage: `url(${Forest})` }}
-              className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div  "
-            >
+          <article style={{ backgroundImage: `url(${Forest})` }}>
+            <div className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div  ">
               {/* Hover effects  */}
               <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
                 <span className="text-xl  font-bold text-gray-600 tracking-wider ">
@@ -101,11 +108,8 @@ function Work() {
           </article>
 
           {/* Fourth project  */}
-          <article className="" style={{ backgroundImage: `url(${Forest})` }}>
-            <div
-              style={{ backgroundImage: `url(${Forest})` }}
-              className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div  "
-            >
+          <article style={{ backgroundImage: `url(${Forest})` }}>
+            <div className="w-full h-full shadow-lg shadow-[#040c16]  group container rounded-md flex justify-center items-center mx-auto content-div  ">
               {/* Hover effects  */}
               <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
                 <span className="text-xl  font-bold text-gray-600 tracking-wider ">
