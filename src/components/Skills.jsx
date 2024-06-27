@@ -89,7 +89,7 @@ const Skills = () => {
                 src={MongoDB}
                 alt="MongoDB icon"
               />
-              <p className="sm:text-lg md:text-xl lg:text-2xl my-4">MONGODB</p>
+              <p className=" my-4">MONGODB</p>
             </div>
           </div>
         </div>
