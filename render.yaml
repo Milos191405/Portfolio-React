@@ -1,10 +1,10 @@
+# Exported from Render on 2024-06-27T18:42:11Z
 services:
-  - type: web
-    name: your-project-name
-    env: static
-    staticPublishPath: /build
-    buildCommand: npm install && npm run build
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+- type: web
+  name: Portfolio-React
+  runtime: static
+  repo: https://github.com/Milos191405/Portfolio-React
+  buildCommand: npm install; npm run build
+  staticPublishPath: dist
+  autoDeploy: false
+version: "1"
