@@ -19,18 +19,19 @@ const About = () => {
         <div className="max-w-[1000px] w-full grid sm:grid-cols-1 gap-8 px-4">
           <div className="text-left text-xl sm:text-2xl md:text-3xl font-bold">
             <p>
-              Hi. I`m Milos Mirkovic, nice to meet you. <br /> Please take a look
-              around.
+              Hi. I`m Milos Mirkovic, nice to meet you. <br /> Please take a
+              look around.
             </p>
-            
           </div>
           <div>
             <p className="text-sm sm:text-lg md:text-xl ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Reprehenderit dolor, possimus modi earum rerum dignissimos sunt.
-              Ratione doloremque, maxime rem aliquam, soluta fugit velit,
-              possimus esse ex laborum itaque voluptatibus.
-              {/* Replace this text with your actual content */}
+              I specialize in frontend technologies like HTML, CSS,
+              JavaScript and React complemented by a strong backend foundation in
+              frameworks such as Node.js and Express. My passion lies in solving
+              complex problems through innovative web solutions. I thrive on
+              continuous learning, keeping pace with the dynamic landscape of
+              web development to deliver impactful projects that meet modern
+              digital demands.
             </p>
           </div>
         </div>
