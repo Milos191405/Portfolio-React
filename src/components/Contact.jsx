@@ -28,16 +28,18 @@ function Contact() {
             placeholder="Name"
             name="name"
             aria-label="Name"
+            required
           />
         </label>
         <label className="block my-4">
-          <span className="sr-only">Email</span>
+          <span className="sr-only" >Email</span>
           <input
             className="bg-[#ccd6f6] p-1 w-full"
             type="email"
             placeholder="Email"
             name="email"
             aria-label="Email"
+            required
           />
         </label>
         <label className="block">
@@ -49,6 +51,7 @@ function Contact() {
             rows="5"
             placeholder="Message"
             aria-label="Message"
+            required
           ></textarea>
         </label>
         <button className="sm:text-lg md:text-xl text-white border-2 hover:bg-blue-600 hover:border-blue-600 px-4 py-3 my-4 mx-auto flex items-center">
