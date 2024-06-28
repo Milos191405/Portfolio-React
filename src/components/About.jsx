@@ -27,8 +27,7 @@ const About = () => {
             <p className="text-sm sm:text-lg md:text-xl ">
               I specialize in frontend technologies like HTML, CSS,
               JavaScript and React complemented by a strong backend foundation in
-              frameworks such as Node.js and Express. My passion lies in solving
-              complex problems through innovative web solutions. I thrive on
+              frameworks such as Node.js and Express.I thrive on
               continuous learning, keeping pace with the dynamic landscape of
               web development to deliver impactful projects that meet modern
               digital demands.
