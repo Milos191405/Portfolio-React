@@ -1,14 +1,16 @@
 .content-div {
-    background:no-repeat;
+    background: no-repeat;
     background-size: cover;
-background-position: center;
-height: 250px;
+    background-position: center;
+    height: 250px;
+    
 }
 
 .content-div:hover {
 background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.945),
-    rgba(8, 61, 122, 0.8)
-);
+to right,
+rgba(255, 255, 255, 0.942),
+rgba(52, 72, 174, 0.264)
+
+)!important;
 }

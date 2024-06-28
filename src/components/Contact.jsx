@@ -12,10 +12,10 @@ function Contact() {
         className="flex flex-col max-w-[1000px] w-full "
       >
         <div className="pb-2 text-left">
-          <p className="text-2xl  font-bold inline border-b-4 border-blue-600 text-gray-300">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold inline border-b-4 border-blue-600 text-gray-300">
             Contact
           </p>
-          <p className=" text-gray-300 py-4">
+          <p className=" text-gray-300 sm:text-lg md:text-xl py-4">
             // Submit the form below or shoot me an email -
             milos.mirkovic7@gmail.com
           </p>
@@ -45,13 +45,13 @@ function Contact() {
           <textarea
             className="bg-[#ccd6f6] p-1 w-full"
             name="message"
-            cols="20" 
+            cols="20"
             rows="5"
             placeholder="Message"
             aria-label="Message"
           ></textarea>
         </label>
-        <button className="text-white border-2 hover:bg-blue-600 hover:border-blue-600 px-4 py-3 my-4 mx-auto flex items-center">
+        <button className="sm:text-lg md:text-xl text-white border-2 hover:bg-blue-600 hover:border-blue-600 px-4 py-3 my-4 mx-auto flex items-center">
           Let`s Collaborate
         </button>
       </form>
