@@ -1,5 +1,5 @@
 import Forest from "../assets/Work/forest.jpg";
- import "../components/work.css";
+
 import excelConverter from "../assets/Work/excel-converter.png";
 import Portfolio from "../assets/Work/Portfolio version 1.png";
 
@@ -28,6 +28,7 @@ function Work() {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
+            
           >
             <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div">
               {/* Hover effects  */}
