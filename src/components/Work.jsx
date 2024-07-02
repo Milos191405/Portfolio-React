@@ -65,7 +65,7 @@ function Work() {
           >
             <div className="w-full h-full shadow-sm shadow-white group container rounded-md flex justify-center items-center mx-auto content-div ">
               {/* Hover effects  */}
-              <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
+              <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100 ">
                 <span className="text-xl  font-bold text-gray-600 tracking-wider ">
                   Portfolio, HTML and CSS
                 </span>
