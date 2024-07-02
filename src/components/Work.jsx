@@ -1,8 +1,7 @@
 import Forest from "../assets/Work/forest.jpg";
-import "./work.css";
-import excelConverter from '../assets/Work/excel-converter.png'
-import Portfolio from '../assets/Work/Portfolio version 1.png';
-
+ import "../components/work.css";
+import excelConverter from "../assets/Work/excel-converter.png";
+import Portfolio from "../assets/Work/Portfolio version 1.png";
 
 function Work() {
   return (
@@ -17,7 +16,7 @@ function Work() {
             Work
           </p>
           <p className="sm:text-lg md:text-xl   pt-4 py-5">
-            // Check out some of my recent work
+             Check out some of my recent work
           </p>
         </div>
 
@@ -30,10 +29,10 @@ function Work() {
               backgroundPosition: "center",
             }}
           >
-            <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div ">
+            <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div">
               {/* Hover effects  */}
               <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100  ">
-                <span className="text-xl  font-bold text-gray-600 tracking-wider  ">
+                <span className="text-xl  font-bold text-gray-800 tracking-wider  ">
                   Portfolio, HTML and CSS
                 </span>
                 <div className="pt-8 text-center">
@@ -63,7 +62,7 @@ function Work() {
               backgroundPosition: "center",
             }}
           >
-            <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div ">
+            <div className="w-full h-full shadow-sm shadow-white group container rounded-md flex justify-center items-center mx-auto content-div ">
               {/* Hover effects  */}
               <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
                 <span className="text-xl  font-bold text-gray-600 tracking-wider ">

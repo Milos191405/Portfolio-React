@@ -16,7 +16,7 @@ function Contact() {
             Contact
           </p>
           <p className=" text-gray-300 sm:text-lg md:text-xl py-4">
-            // Submit the form below or shoot me an email -
+            Submit the form below or shoot me an email -
             milos.mirkovic7@gmail.com
           </p>
         </div>
@@ -48,7 +48,7 @@ function Contact() {
             className="bg-[#ccd6f6] p-1 w-full"
             name="message"
             cols="20"
-            rows="5"
+            rows="10"
             placeholder="Message"
             aria-label="Message"
             required

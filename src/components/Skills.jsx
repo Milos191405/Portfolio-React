@@ -20,12 +20,12 @@ const Skills = () => {
             Skills
           </p>
           <p className="text-base sm:text-lg md:text-xl py-4">
-            //These are the technologies I`ve worked with
+            These are the technologies I`ve worked with
           </p>
         </div>
         <div className="w-full h-full flex justify-center items-center">
           <div className="w-full h-full grid grid-cols-2 md:grid-cols-4 gap-4 text-center py-4  ">
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24  mx-auto"
                 src={HTML}
@@ -33,25 +33,25 @@ const Skills = () => {
               />
               <p className="sm:text-lg md:text-xl  my-4">HTML</p>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={CSS}
                 alt="CSS icon"
               />
-              <g:text-2xlp className="sm:text-lg md:text-xl  my-4">CSS</g:text-2xlp>
+              <g:text-2xlp className="sm:text-lg md:text-xl  my-4">
+                CSS
+              </g:text-2xlp>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={JavaScript}
                 alt="JavaScript icon"
               />
-              <p className="sm:text-lg md:text-xl  my-4">
-                JAVASCRIPT
-              </p>
+              <p className="sm:text-lg md:text-xl  my-4">JAVASCRIPT</p>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={ReactImg}
@@ -59,7 +59,7 @@ const Skills = () => {
               />
               <p className="sm:text-lg md:text-xl  my-4">REACT</p>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={GitHub}
@@ -67,7 +67,7 @@ const Skills = () => {
               />
               <p className="sm:text-lg md:text-xl  my-4">GITHUB</p>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={Tailwind}
@@ -75,7 +75,7 @@ const Skills = () => {
               />
               <p className="sm:text-lg md:text-xl  my-4">TAILWIND</p>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={Node}
@@ -83,7 +83,7 @@ const Skills = () => {
               />
               <p className="sm:text-lg md:text-xl  my-4">NODE</p>
             </div>
-            <div className="shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
+            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
               <img
                 className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
                 src={MongoDB}

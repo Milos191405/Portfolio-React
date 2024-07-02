@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../assets/react.png";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -17,19 +17,54 @@ function Navbar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-3">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to="/skills">Skills</Link>
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            Skills
+          </NavLink>
         </li>
         <li>
-          <Link to="/work">Work</Link>
+          <NavLink
+            to="/work"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            Work
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
 
