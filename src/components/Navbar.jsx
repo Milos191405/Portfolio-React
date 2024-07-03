@@ -127,7 +127,7 @@ function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/milos-mirkovic-7976726b/"
               target="blank"
               aria-label="LinkedIn"
             >
@@ -138,7 +138,7 @@ function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 bg-[#333333]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="https://www.github.com"
+              href="https://github.com/Milos191405"
               target="blank"
               aria-label="GitHub"
             >
@@ -160,7 +160,8 @@ function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 bg-[#565f69]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/src/Resume/MilosResume.pdf" target="_blank"
+              href="/src/Resume/MilosResume.pdf"
+              target="_blank"
               aria-label="Resume"
             >
               Resume <BsFillPersonLinesFill size={30} />
