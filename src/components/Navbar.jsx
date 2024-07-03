@@ -28,26 +28,7 @@ function Navbar() {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600" : "hover:text-blue-600"
-            }
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/skills"
-            className={({ isActive }) =>
-              isActive ? "text-blue-600" : "hover:text-blue-600"
-            }
-          >
-            Skills
-          </NavLink>
-        </li>
+
         <li>
           <NavLink
             to="/work"
@@ -58,6 +39,29 @@ function Navbar() {
             Work
           </NavLink>
         </li>
+
+        <li>
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            Skills
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "hover:text-blue-600"
+            }
+          >
+            About
+          </NavLink>
+        </li>
+
         <li>
           <NavLink
             to="/contact"
@@ -95,24 +99,28 @@ function Navbar() {
         >
           <Link to="/">Home</Link>
         </li>
-        <li
-          onClick={closeMenu}
-          className="text-2xl py-6 w-3/4 text-center hover:bg-white hover:text-gray-700 mb-2"
-        >
-          <Link to="/about">About</Link>
-        </li>
-        <li
-          onClick={closeMenu}
-          className="text-2xl py-6 w-3/4 text-center hover:bg-white hover:text-gray-700 mb-2"
-        >
-          <Link to="/skills">Skills</Link>
-        </li>
+
         <li
           onClick={closeMenu}
           className="text-2xl py-6 w-3/4 text-center hover:bg-white hover:text-gray-700 mb-2"
         >
           <Link to="/work">Work</Link>
         </li>
+
+        <li
+          onClick={closeMenu}
+          className="text-2xl py-6 w-3/4 text-center hover:bg-white hover:text-gray-700 mb-2"
+        >
+          <Link to="/skills">Skills</Link>
+        </li>
+
+        <li
+          onClick={closeMenu}
+          className="text-2xl py-6 w-3/4 text-center hover:bg-white hover:text-gray-700 mb-2"
+        >
+          <Link to="/about">About</Link>
+        </li>
+
         <li
           onClick={closeMenu}
           className="text-2xl py-6 w-3/4 text-center hover:bg-white hover:text-gray-700 mb-2"
