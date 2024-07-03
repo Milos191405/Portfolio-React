@@ -160,7 +160,7 @@ function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 bg-[#565f69]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/src/assets/MilosResume.pdf"
+              href="/public/MilosResume.pdf"
               target="_blank"
               aria-label="Resume"
             >
