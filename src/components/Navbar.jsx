@@ -149,7 +149,7 @@ function Navbar() {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 bg-[#6fc2b0]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="mailto:milos.mirkovic7@gmail.com"
+              href="mailto:milos.mirkovic7@gmail.com?subject=Request for collaboration&body=Contents of email"
               target="blank"
               aria-label="Email"
             >
