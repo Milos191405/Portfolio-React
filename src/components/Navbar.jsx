@@ -11,13 +11,13 @@ function Navbar() {
   const closeMenu = () => setNav(false);
 
   return (
-    <nav className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <nav className="fixed w-full h-[80px] flex justify-between items-center px-8 bg-[#0a192f] text-gray-300">
       <div>
         <img src={Logo} alt="Logo" className="w-[50px]" />
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-3">
+      <ul className="hidden md:flex gap-6 text-lg">
         <li>
           <NavLink
             to="/"
@@ -73,6 +73,8 @@ function Navbar() {
           </NavLink>
         </li>
       </ul>
+
+      
 
       {/* Hamburger Icon */}
       <div
