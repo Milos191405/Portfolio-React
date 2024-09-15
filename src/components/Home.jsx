@@ -9,21 +9,22 @@ function Home() {
   };
 
   return (
-    <div name="home" className="w-full min-h-screen bg-[#0a192f]">
-      <div className="max-w-[1200px] mx-auto px-8 pt-12 flex flex-col justify-center min-h-screen text-white md:pt-0">
-        <p className="text-xl md:text-2xl text-blue-600 mb-4">
-          Hi, my name is{" "}
-        </p>
-        <h1 className="xs:text-2xl sm:text-3xl md:text-4xl mb-2 font-bold">
+    <div
+      name="home"
+      className="w-full h-[100vh] bg-[#0a192f] border border-green-600   "
+    >
+      <div className="max-w-[1200px] h-[100%]   flex flex-col justify-center  text-white  border border-green-600">
+        <p className="text-lg md:text-2xl text-blue-600 mb-4">Hi, my name is</p>
+        <h1 className="text-2xl md:text-4xl mb-2 font-bold">
           Milos Mirkovic
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-500">
-          I’m a Full Stack Developer
+          I build things for the web
         </h2>
-        <p className="xs:text-base sm:text-lg md:text-xl mb-1 text-gray-500 py-4 max-w-[700px]">
-          I specialize in frontend technologies like HTML, CSS, JavaScript, and
-          React, complemented by a strong backend foundation in frameworks such
-          as Node.js and Express.
+        <p className="text-sm md:text-xl mb-1 text-gray-500 py-4 max-w-[700px]">
+          My focus is on frontend development, with expertise in HTML, CSS,
+          JavaScript, and React. I also have a solid foundation in backend
+          technologies like Node.js and Express.
         </p>
         <div>
           <button
