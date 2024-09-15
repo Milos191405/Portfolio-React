@@ -47,7 +47,7 @@ function Navbar() {
   const closeMenu = () => setNav(false);
 
   return (
-    <nav className=" w-full top-0  h-[100px] flex flex-row items-center justify-between  px-4 bg-[#0a192f] text-gray-300  ">
+    <nav className=" w-full fixed top-0  h-[100px] flex flex-row items-center justify-between  px-4 bg-[#0a192f] text-gray-300  ">
       {/* Logo */}
       <div>
         <Link to={"/"}>

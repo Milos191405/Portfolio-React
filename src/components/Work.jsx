@@ -16,43 +16,34 @@ function Work() {
             Work
           </p>
           <p className="sm:text-lg md:text-xl   pt-4 py-5">
-             Check out some of my recent work
+            Check out some of my recent work
           </p>
         </div>
 
         <section className="grid sm:grid-cols-1 md:grid-cols lg:grid-cols-2 gap-4">
-          {/* First project  */}
+         
           <article
             style={{
+              position:"relative",
               backgroundImage: `url(${Portfolio})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              opacity: 0.2,
+              height:"300px",
             }}
-            
           >
-            <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div">
-              {/* Hover effects  */}
-              <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100  ">
-                <span className="text-xl  font-bold text-gray-800 tracking-wider  ">
-                  Portfolio, HTML and CSS
-                </span>
-                <div className="pt-8 text-center">
-                  <a href="/">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Demo
-                    </button>
-                  </a>
-                  <a
-                    href="https://github.com/Milos191405/Portfolio"
-                    target="blank"
-                  >
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Code
-                    </button>
-                  </a>
+            <div className="">
+              <div className=" text-green-600">
+                <h3>My first Portfolio, HTML and CSS only</h3>
+              </div> 
+            
+                  
+              
+                  
+                
                 </div>
-              </div>
-            </div>
+             
+           
           </article>
 
           {/* Second project  */}

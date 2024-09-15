@@ -4,9 +4,22 @@ function Contact() {
   return (
     <section
       name="contact"
-      className="w-full min-h-screen bg-[#0a192f] flex justify-center items-center p-4 pt-16"
+      className="w-full min-h-screen bg-[#0a192f] flex justify-center items-center p-4 pt-16 border   "
     >
-      <form
+      <div className=" flex flex-col items-center justify-center h-screen w-full  ">
+        <p className="text-sm text-center text-blue-600 mb-1">What's next?</p>
+        <p className="text-xl text-center  text-gray-300 mb-3">Contact</p>
+        <p className="text-gray-500">
+          Although I’m still in the early stages of my programming journey, I’m
+          eager to learn, grow, and make new connections. Feel free to reach out
+          if you have advice or opportunities for collaboration! I’d love to
+          connect, exchange ideas, and expand my network.
+        </p>
+        <div className="border  border-blue-600 mt-5 ">
+          <button className="text-blue-600   p-2 ">Let's talk</button>
+        </div>
+      </div>
+      {/* <form
         method="POST"
         action="https://getform.io/f/paygnxka"
         className="flex flex-col max-w-[1000px] w-full "
@@ -57,7 +70,7 @@ function Contact() {
         <button className="sm:text-lg md:text-xl text-white border-2 hover:bg-blue-600 hover:border-blue-600 px-4 py-3 my-4 mx-auto flex items-center">
           Let`s Collaborate
         </button>
-      </form>
+      </form> */}
     </section>
   );
 }

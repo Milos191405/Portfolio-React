@@ -2,19 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.content-div {
-  background: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 250px;
+/* Ensure the header styles are in place */
+
+
+#after:after {
+  content: "";;
+  display: block;
+  
+  width: 150%;
+  height: 2px;
+  position: absolute;
+  background-color:blue;
+  left: 75%;
+  top: 50%;
+ 
+ 
 }
 
-.content-div:hover {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.942),
-    rgba(57, 78, 183, 0.46)
-  ) !important;
-} 
+
+
 
 
