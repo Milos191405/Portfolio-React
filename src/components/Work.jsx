@@ -1,7 +1,9 @@
 import Forest from "../assets/Work/forest.jpg";
+import "./styles.css";
 
 import excelConverter from "../assets/Work/excel-converter.png";
 import Portfolio from "../assets/Work/Portfolio version 1.png";
+import CSS from '../assets/css.png'
 
 function Work() {
   return (
@@ -20,116 +22,33 @@ function Work() {
           </p>
         </div>
 
-        <section className="grid sm:grid-cols-1 md:grid-cols lg:grid-cols-2 gap-4">
-         
-          <article
-            style={{
-              position:"relative",
-              backgroundImage: `url(${Portfolio})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              opacity: 0.2,
-              height:"300px",
-            }}
+        <article
+          id="work"
+          className="relative grid grid-cols-12 grid-rows-2 gap-10  h-[500px] w-[1200px]"
+        >
+          {/* First div (Background Image) */}
+          <div className="col-span-8 row-span-2  opacity-20 bg-[#39e5fc] hover:opacity-55 hover:bg- border border-red-600 ">
+            <img src={CSS} alt="" className="h-full w-full " />
+          </div>
+
+          {/* Second div (Content) */}
+          <div
+            className="col-span-8 col-start-7 row-span-2 absolute flex justify-center h-[500px] items-center border border-red-600 rounded-md z-10"
+            style={{ backgroundColor: "var(--bg-primary)" }}
           >
-            <div className="">
-              <div className=" text-green-600">
-                <h3>My first Portfolio, HTML and CSS only</h3>
-              </div> 
-            
-                  
-              
-                  
-                
-                </div>
-             
-           
-          </article>
-
-          {/* Second project  */}
-          <article
-            style={{
-              backgroundImage: `url(${excelConverter})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="w-full h-full shadow-sm shadow-white group container rounded-md flex justify-center items-center mx-auto content-div ">
-              {/* Hover effects  */}
-              <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100 ">
-                <span className="text-xl  font-bold text-gray-600 tracking-wider ">
-                  Portfolio, HTML and CSS
-                </span>
-                <div className="pt-8 text-center">
-                  <a
-                    href="https://excel-converter-xlm9.onrender.com/"
-                    target="blank"
-                  >
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Demo
-                    </button>
-                  </a>
-                  <a
-                    href="https://github.com/Milos191405/Excel-converter"
-                    target="blank"
-                  >
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Code
-                    </button>
-                  </a>
-                </div>
-              </div>
+            <div className="flex flex-col items-center text-center text-white p-10">
+              <h3 className="text-lg font-bold">My first Portfolio</h3>
+              <p className="mt-2">
+                Portfolio made only with HTML and CSS. My first project that I
+                made.
+              </p>
+              <ul className="flex space-x-5 mt-4">
+                <li className="text-sm">HTML</li>
+                <li className="text-sm">CSS</li>
+              </ul>
             </div>
-          </article>
-
-          {/* Third project  */}
-          <article style={{ backgroundImage: `url(${Forest})` }}>
-            <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div  ">
-              {/* Hover effects  */}
-              <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
-                <span className="text-xl  font-bold text-gray-600 tracking-wider ">
-                  React Portfolio
-                </span>
-                <div className="pt-8 text-center">
-                  <a href="/">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Demo
-                    </button>
-                  </a>
-                  <a href="/" target="blank">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Code
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          {/* Fourth project  */}
-          <article style={{ backgroundImage: `url(${Forest})` }}>
-            <div className="w-full h-full shadow-sm shadow-white  group container rounded-md flex justify-center items-center mx-auto content-div  ">
-              {/* Hover effects  */}
-              <div className="w-full flex flex-col items-center opacity-0 group-hover:opacity-100">
-                <span className="text-xl  font-bold text-gray-600 tracking-wider ">
-                  React Portfolio
-                </span>
-                <div className="pt-8 text-center">
-                  <a href="/">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Demo
-                    </button>
-                  </a>
-                  <a href="/" target="blank">
-                    <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-500 font-bold text-base ">
-                      Code
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-        </section>
+          </div>
+        </article>
       </div>
     </div>
   );

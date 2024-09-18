@@ -47,15 +47,11 @@ function Navbar() {
   const closeMenu = () => setNav(false);
 
   return (
-    <nav className=" w-full fixed top-0  h-[100px] flex flex-row items-center justify-between  px-4 bg-[#0a192f] text-gray-300  ">
+    <nav className=" w-full fixed top-0  h-[80px] flex flex-row items-center justify-between bg-bg-primary  px-4 bg-primary text-gray-300 border-b-[1px] border-bg-primary  ">
       {/* Logo */}
       <div>
         <Link to={"/"}>
-          <img
-            src={Logo}
-            alt="Logo"
-            className="w-[100px]"
-          />
+          <img src={Logo} alt="Logo" className="w-[80px]  " />
         </Link>
       </div>
 
@@ -95,14 +91,14 @@ function Navbar() {
           <div className="fixed top-0 left-0 w-screen h-screen bg-[#0a192f]/10  text-gray-300 flex">
             {/* Blurred overlay on the left 1/4 */}
             <div
-              className="w-1/4 h-screen mt-[100px] backdrop-blur-sm z-40 "
+              className="w-1/4 h-screen top-[80px]  backdrop-blur-sm z-50 relative  "
               onClick={closeMenu}
             ></div>
 
             {/* Mobile menu on the right 3/4 */}
             <ul
               id="mobile-menu"
-              className="pt-[200px]  w-3/4 h-screen  bg-[#0c103a] text-white flex flex-col items-center z-50 relative "
+              className="pt-[200px]  w-3/4 h-screen  bg-[#111f4d] text-text-secondary flex flex-col items-center z-20 relative "
             >
               {navLinks.map(({ to, label }) => (
                 <li

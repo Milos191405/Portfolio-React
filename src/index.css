@@ -2,23 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ensure the header styles are in place */
+:root {
+  --bg-primary: #0a192fb2;
+  --bg-secondary:#111f4d:
+  --text-primary: #6b7280;
+  --text-secondary:#4795f4;
+  --text-header:white;
 
+}
 
+/* 
 #after:after {
   content: "";;
-  display: block;
-  
-  width: 150%;
-  height: 2px;
+  display: block; 
+  width: 65%;
+  height: 1px;
   position: absolute;
-  background-color:blue;
-  left: 75%;
-  top: 50%;
+  background-color:var(--text-secondary);
+  left: 35%;
+  top: 25%;
+  z-index: 10;
  
  
 }
-
+ */
 
 
 
