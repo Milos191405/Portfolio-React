@@ -44,11 +44,11 @@ function Work() {
           <article
             key={index}
             id="work"
-            className="relative grid grid-cols-2 grid-rows-1 h-[450px] w-[90%] mx-auto mb-1"
+            className="relative    w-[90%] mx-auto mb-1  "
           >
-               {/* First div (Background Image) */}
+            {/* First div (Background Image) */}
             <div
-              className="col-span-2 row-span-1 opacity-20 bg-cover h-[100%]  hover:opacity-55"
+              className="absolute top-0 left-0 right-0 bottom-0 opacity-20 bg-cover h-full w-full hover:opacity-55"
               style={{
                 backgroundImage: `url(${project.backgroundImage})`, // Set dynamic background image
                 backgroundPosition: "center",
@@ -64,7 +64,7 @@ function Work() {
             </div>
             {/* Second div (Content) */}
             <div
-              className="col-span-2 row-span-1 absolute flex justify-center pt-5 h-full items-center rounded-md z-10"
+              className="relative flex justify-center items-center h-full w-full z-10 "
               style={{ backgroundColor: "var(--bg-primary)" }}
             >
               <div className="flex flex-col text-white px-3 h-[100%]">
@@ -93,7 +93,7 @@ function Work() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={label}
-                        className="flex p-1 text-text-primary hover:scale-105 transition-transform duration-300"
+                        className="flex p-1 pb-5 text-text-primary hover:scale-105 transition-transform duration-300"
                       >
                         {icon}
                       </a>
