@@ -1,28 +1,68 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import MentorMate from '../assets/Work/mentor.png'
+import MentorMate from '../assets/Work/mentor.png';
+import excel from '../assets/Work/excelConverter.png';
+import igraliste from '../assets/Work/igraliste.png';
 import CSS from "../assets/css.png"; // Assuming you're using this image for the background
 
 const projects = [
   {
     name: "Your Mentor Mate",
-    backgroundImage:MentorMate,
-    description:"A mentoring platform with integrated payment and video call options facilitates seamless mentor-mentee connections.",
+    backgroundImage: MentorMate, // Ensure the image is properly imported
+    description:
+      "A mentoring platform with integrated payment and video call options to facilitate seamless mentor-mentee connections.",
     technologies: ["React", "CSS", "Tailwind", "Node.js", "Express.js"],
     socialLinks: [
       {
         href: "https://github.com/orgs/final-project-24/repositories",
-        label: "GitHub",
+        label: "GitHub Repository",
         icon: <FaGithub size={25} />,
       },
       {
         href: "https://mentor-mate-frontend.onrender.com/",
-        label: "MentorMate",
+        label: "Visit MentorMate",
+        icon: <FaExternalLinkAlt size={25} />,
+      },
+    ],
+  },
+  {
+    name: "Excel Converter",
+    backgroundImage: excel, // Ensure the image is properly imported
+    description:
+      "A simple web app that helps users sort data from Excel files. Automatically generates columns and offers sorting options. Backend integration is planned for data persistence.",
+    technologies: ["React", "Tailwind"],
+    socialLinks: [
+      {
+        href: "https://github.com/Milos191405/Excel-converter",
+        label: "GitHub Repository",
+        icon: <FaGithub size={25} />,
+      },
+      {
+        href: "https://excel-converter-xlm9.onrender.com/",
+        label: "Visit Excel Converter",
+        icon: <FaExternalLinkAlt size={25} />,
+      },
+    ],
+  },
+  {
+    name: "Igraonica Igraliste",
+    backgroundImage: igraliste, // Ensure the image is properly imported
+    description:
+      "A web page for a children's playground in Serbia. It's my first solo project, still a work in progress.",
+    technologies: ["React", "Tailwind", "CSS"],
+    socialLinks: [
+      {
+        href: "https://github.com/Milos191405/Igraliste",
+        label: "GitHub Repository",
+        icon: <FaGithub size={25} />,
+      },
+      {
+        href: "https://igraliste.onrender.com/",
+        label: "Visit Igraonica Igraliste",
         icon: <FaExternalLinkAlt size={25} />,
       },
     ],
   },
 ];
-
 function Work() {
   return (
     <div
@@ -44,7 +84,7 @@ function Work() {
           <article
             key={index}
             id="work"
-            className="relative    w-[90%] mx-auto mb-1  "
+            className="relative w-[90%] mx-auto mb-10  "
           >
             {/* First div (Background Image) */}
             <div
