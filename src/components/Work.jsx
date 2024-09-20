@@ -47,7 +47,7 @@ const projects = [
     name: "Igraonica Igraliste",
     backgroundImage: igraliste, // Ensure the image is properly imported
     description:
-      "A web page for a children's playground in Serbia. It's my first solo project, still a work in progress.",
+      "A vibrant website for a children's playground in Serbia, designed to showcase its playful atmosphere and services. As my first solo project, it reflects both my creativity and technical skills. While still in development, it's a growing project aimed at delivering an engaging online experience for parents and kids."
     technologies: ["React", "Tailwind", "CSS"],
     socialLinks: [
       {
