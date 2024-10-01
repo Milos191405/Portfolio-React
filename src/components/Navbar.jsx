@@ -71,25 +71,30 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full fixed top-0 h-[80px] flex flex-row items-center justify-between bg-bg-primary px-4 text-gray-300 border-b-[1px] border-bg-primary z-50 transition-transform duration-300 ${
+      className={`w-full fixed top-0 h-[80px] lg:h-[100px] flex flex-row items-center justify-between bg-bg-primary px-4 text-gray-300 border-b-[1px] border-white z-50 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-     {/* Logo */}
-<div>
-  <ScrollLink to="home" smooth={true} duration={500}>
-    <img src={LogoCrop} alt="Logo" className="w-[80px]" />
-  </ScrollLink>
-</div>
+      {/* Logo */}
+      <div>
+        <ScrollLink to="home" smooth={true} duration={800}>
+          <img
+            src={LogoCrop}
+            alt="Logo"
+            className="w-[80px]  lg:w-[100px] cursor-pointer"
+          />
+        </ScrollLink>
+      </div>
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-6 text-lg">
+      <ul className="hidden lg:flex gap-6 text-lg xl:text-xl cursor-pointer ">
         {navLinks.map(({ to, label }) => (
           <li key={to}>
             <ScrollLink
               to={to}
               smooth={true}
-              duration={500}
+              duration={800}
               onClick={closeMenu}
+              className="hover:text-text-secondary active:text-text-primary"
             >
               {label}
             </ScrollLink>
@@ -100,7 +105,7 @@ function Navbar() {
       {/* Hamburger Icon */}
       <div
         onClick={handleClick}
-        className="md:hidden z-10 cursor-pointer text-2xl"
+        className="lg:hidden z-10 cursor-pointer text-2xl"
         aria-controls="mobile-menu"
         aria-expanded={nav ? "true" : "false"}
       >
@@ -131,7 +136,7 @@ function Navbar() {
                   <ScrollLink
                     to={to}
                     smooth={true}
-                    duration={500}
+                    duration={800}
                     onClick={closeMenu}
                   >
                     {label}
@@ -144,12 +149,19 @@ function Navbar() {
       )}
 
       {/* Social Icons */}
-      <div className="hidden md:flex fixed flex-col top-[35%] left-0">
+      <div
+        className={`fixed left-0 transition-all duration-300 ${
+          visible
+            ? "top-[calc(50vh-80px)] xl:top-[calc(50vh-100px)]"
+            : "top-[50vh]"
+        }`}
+      >
+        {/* Your Navbar content goes here */}
         <ul>
           {socialLinks.map(({ href, label, icon, bgColor }) => (
             <li
               key={href}
-              className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 ${bgColor}`}
+              className={` hidden lg:flex lg:w-[160px] lg:h-[60px]   lg:justify-between lg:items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 ${bgColor}`}
             >
               <a
                 className="flex justify-between items-center w-full text-gray-300"

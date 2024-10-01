@@ -7,17 +7,17 @@ const About = ({isNavOpen}) => {
       }`}
       aria-labelledby="about-heading"
     >
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <header className="max-w-[1000px] w-full px-6 ">
+      <div className="flex flex-col justify-center items-center w-full h-full md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] md:mx-auto ">
+        <header className="w-full px-6 lg:px-0 ">
           <h2
             id="about-heading"
-            className="text-left text-xl font-bold inline border-b-2 border-blue-600  "
+            className="text-left text-xl md:text-2xl xl:text-3xl font-bold inline border-b-2 border-blue-600  "
           >
             About Me
           </h2>
         </header>
-        <div className="max-w-[1000px] w-full grid grid-cols-1 gap-8 px-6 py-8">
-          <article className="text-left text-sm space-y-5">
+        <div className="max-w-[1000px] xl:max-w-[1200px] w-full grid grid-cols-1 gap-8 px-6 py-8 lg:px-0 ">
+          <article className="text-left text-sm md:text-base xl:text-xl space-y-5">
             <p>
               Hi! I'm Milos, and I enjoy creating innovative solutions for the
               web. My interest in web development has been long-standing, but I

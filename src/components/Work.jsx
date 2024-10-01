@@ -72,25 +72,23 @@ function Work() {
       className="pt-14  min-h-screen bg-[#0a192f] text-gray-300  items-center px-6"
     >
       {/* container */}
-      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full   ">
+      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full md:max-w-[700px] xl:max-w-[1200px] md:mx-auto  ">
         <div className="">
-          <p className="text-xl font-bold  text-grey-300 inline border-b-2  border-blue-600">
+          <p className="text-xl md:text-2xl xl:text-4xl font-bold  text-grey-300 inline border-b-2  border-blue-600">
             Work
           </p>
-          <p className=" py-4">
-            Check out some of my recent work
-          </p>
+          <p className=" py-4 md:text-lg xl:text-2xl">Check out some of my recent work</p>
         </div>
 
         {projects.map((project, index) => (
           <article
             key={index}
             id="work"
-            className="relative w-[%] mb-10 mt-8 "
+            className="relative  mb-10 mt-8 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1500px]  lg:grid lg:grid-cols-12"
           >
             {/* First div (Background Image) */}
             <div
-              className="absolute top-0 left-0 right-0 bottom-0 opacity-30 bg-cover h-full w-full hover:opacity-55"
+              className="absolute top-0 left-0 right-0 bottom-0 opacity-10 bg-cover h-full w-full hover:opacity-60 lg:col-start-1 lg:col-end-7"
               style={{
                 backgroundImage: `url(${project.backgroundImage})`, // Set dynamic background image
                 backgroundPosition: "center",
@@ -106,27 +104,31 @@ function Work() {
             </div>
             {/* Second div (Content) */}
             <div
-              className="relative flex justify-center items-center h-full w-full z-10 "
+              className="relative flex justify-center items-center h-full w-full z-10 lg:col-start-6 lg:col-end-12   "
               style={{ backgroundColor: "var(--bg-primary)" }}
             >
-              <div className="flex flex-col text-white px-3 h-[100%]">
-                <p className="text-text-secondary pt-2">Featured Project</p>
-                <h3 className="text-lg font-bold text-white pt-3 hover:text-text-secondary cursor-pointer">
+              <div className="flex flex-col text-white  px-3 lg:px-0 h-[100%] lg:text-end ">
+                <p className="text-text-secondary md:text-lg xl:text-xl  pt-2">
+                  Featured Project
+                </p>
+                <h3 className="text-lg md:text-xl xl:text-2xl font-bold text-white  pt-3 hover:text-text-secondary cursor-pointer">
                   {project.name}
                 </h3>
-                <p className="pt-5 text-text-primary">{project.description}</p>
+                <p className="pt-5 text-text-primary md:text-lg xl:text-xl">
+                  {project.description}
+                </p>
 
                 {/* Technologies List */}
-                <ul className="flex flex-wrap mt-5 w-[100%] text-text-secondary">
+                <ul className="flex flex-wrap mt-5 w-[100%] text-text-secondary justify-end  ">
                   {project.technologies.map((tech, techIndex) => (
-                    <li key={techIndex} className="text-sm mr-3">
+                    <li key={techIndex} className="text-sm mr-3 xl:ml-3 md:text-lg  ">
                       {tech}
                     </li>
                   ))}
                 </ul>
 
                 {/* Social Links */}
-                <div className="flex space-x-1 pt-5">
+                <div className="flex space-x-1 pt-5 lg:justify-end ">
                   {project.socialLinks.map(
                     ({ href, label, icon }, linkIndex) => (
                       <a
@@ -135,7 +137,7 @@ function Work() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={label}
-                        className="flex p-1 pb-5 text-text-primary hover:scale-105 transition-transform duration-300"
+                        className="flex p-1 pb-5 text-text-primary   hover:scale-105 transition-transform duration-300"
                       >
                         {icon}
                       </a>
@@ -146,7 +148,6 @@ function Work() {
             </div>
           </article>
         ))}
-
       </div>
     </div>
   );
