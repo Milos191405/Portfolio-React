@@ -7,94 +7,54 @@ import Tailwind from "../assets/tailwind.png";
 import Node from "../assets/node.png";
 import MongoDB from "../assets/mongo.png";
 
+// Array of skill data
+const skills = [
+  { name: "HTML", img: HTML },
+  { name: "CSS", img: CSS },
+  { name: "JavaScript", img: JavaScript },
+  { name: "React", img: ReactImg },
+  { name: "GitHub", img: GitHub },
+  { name: "Tailwind", img: Tailwind },
+  { name: "Node.js", img: Node },
+  { name: "MongoDB", img: MongoDB },
+];
+
 const Skills = () => {
   return (
-    <div
+    <section
       name="skills"
-      className="w-full min-h-screen pt- bg-[#0a192f] text-gray-300 md:flex items-center justify-center"
+      className="w-full min-h-screen bg-[#0a192f] text-gray-300 flex items-center justify-center px-6"
     >
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full pt-20 sm:pt-20 md:px-auto md:py">
-        <div>
-          <p className="text-2xl sm:text-3xl md:text-4xl  font-bold inline border-b-4 border-blue-600">
+      <div className="max-w-[1000px] mx-auto  flex flex-col justify-center w-full h-full pt-20">
+        {/* Title */}
+        <header>
+          <h2 className="text-xl font-bold border-b-2 border-blue-600">
             Skills
+          </h2>
+          <p className="py-4">
+            These are the technologies I’ve worked with
           </p>
-          <p className="text-base sm:text-lg md:text-xl py-4">
-            These are the technologies I`ve worked with
-          </p>
-        </div>
-        <div className="w-full h-full flex justify-center items-center">
-          <div className="w-full h-full grid grid-cols-2 md:grid-cols-4 gap-4 text-center py-4  ">
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] bg-bg-secondary hover:scale-110 duration-500">
+        </header>
+
+        {/* Skill Icons */}
+        <div className="grid grid-cols-2  gap-8 text-center py-8 ">
+          {skills.map((skill, index) => (
+            <article
+              key={index}
+              className="shadow-md shadow-[#e5e7e8] hover:scale-110 transition-transform duration-500"
+            >
               <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24  mx-auto opacity-10  "
-                src={HTML}
-                alt="HTML icon"
+                className="w-16 mx-auto"
+                src={skill.img}
+                alt={`${skill.name} icon`}
               />
-              <p className="sm:text-lg md:text-xl  my-4">HTML</p>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={CSS}
-                alt="CSS icon"
-              />
-              <g:text-2xlp className="sm:text-lg md:text-xl  my-4">
-                CSS
-              </g:text-2xlp>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={JavaScript}
-                alt="JavaScript icon"
-              />
-              <p className="sm:text-lg md:text-xl  my-4">JAVASCRIPT</p>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={ReactImg}
-                alt="React icon"
-              />
-              <p className="sm:text-lg md:text-xl  my-4">REACT</p>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={GitHub}
-                alt="GitHub icon"
-              />
-              <p className="sm:text-lg md:text-xl  my-4">GITHUB</p>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={Tailwind}
-                alt="Tailwind icon"
-              />
-              <p className="sm:text-lg md:text-xl  my-4">TAILWIND</p>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={Node}
-                alt="Node icon"
-              />
-              <p className="sm:text-lg md:text-xl  my-4">NODE</p>
-            </div>
-            <div className="pt-3 shadow-sm shadow-[#e5e7e8] hover:scale-110 duration-500">
-              <img
-                className="w-12 sm:w-16 md:w-20 lg:w-24 mx-auto"
-                src={MongoDB}
-                alt="MongoDB icon"
-              />
-              <p className="sm:text-lg md:text-xl  my-4">MONGODB</p>
-            </div>
-          </div>
+              <p className="my-4 text-sm">{skill.name}</p>
+            </article>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

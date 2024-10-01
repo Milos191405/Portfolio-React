@@ -1,13 +1,13 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import MentorMate from '../assets/Work/mentor.png';
-import excel from '../assets/Work/excelConverter.png';
-import igraliste from '../assets/Work/igraliste.png';
-import CSS from "../assets/css.png"; // Assuming you're using this image for the background
+import { FaGithub, FaExternalLinkAlt, FaFolder } from "react-icons/fa";
+import MentorMate from "../assets/Work/mentor.png";
+import excel from "../assets/Work/excelConverter.png";
+import igraliste from "../assets/Work/igraliste.png";
+
 
 const projects = [
   {
     name: "Your Mentor Mate",
-    backgroundImage: MentorMate, // Ensure the image is properly imported
+    backgroundImage: MentorMate, 
     description:
       "A mentoring platform with integrated payment and video call options to facilitate seamless mentor-mentee connections.",
     technologies: ["React", "CSS", "Tailwind", "Node.js", "Express.js"],
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     name: "Excel Converter",
-    backgroundImage: excel, // Ensure the image is properly imported
+    backgroundImage: excel, 
     description:
       "A simple web app that helps users sort data from Excel files. Automatically generates columns and offers sorting options. Backend integration is planned for data persistence.",
     technologies: ["React", "Tailwind"],
@@ -45,10 +45,11 @@ const projects = [
   },
   {
     name: "Igraonica Igraliste",
-    backgroundImage: igraliste, // Ensure the image is properly imported
+    backgroundImage: igraliste, 
     description:
-      "A vibrant website for a children's playground in Serbia, designed to showcase its playful atmosphere and services. As my first solo project, it reflects both my creativity and technical skills. While still in development, it's a growing project aimed at delivering an engaging online experience for parents and kids."
+      "A vibrant website for a children's playground in Serbia, designed to highlight its playful atmosphere and services. I am in the process of rewriting the entire codebase from WordPress to React, with plans to introduce new features in the future to enhance the site's functionality.",
     technologies: ["React", "Tailwind", "CSS"],
+
     socialLinks: [
       {
         href: "https://github.com/Milos191405/Igraliste",
@@ -67,15 +68,15 @@ function Work() {
   return (
     <div
       name="work"
-      className="pt-14 w-full min-h-screen bg-[#0a192f] text-gray-300 lg:flex items-center"
+      className="pt-14  min-h-screen bg-[#0a192f] text-gray-300  items-center px-6"
     >
       {/* container */}
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full pt-20 sm:pt-20 md:px-auto md:py">
+      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full pt-20  ">
         <div className="">
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bold inline border-b-4 text-grey-300 border-blue-600">
+          <p className="text-xl font-bold  text-grey-300 border-b-2  border-blue-600">
             Work
           </p>
-          <p className="sm:text-lg md:text-xl pt-4 py-5">
+          <p className=" py-4">
             Check out some of my recent work
           </p>
         </div>
@@ -84,11 +85,11 @@ function Work() {
           <article
             key={index}
             id="work"
-            className="relative w-[90%] mx-auto mb-10  "
+            className="relative w-[%] mb-10 mt-8 "
           >
             {/* First div (Background Image) */}
             <div
-              className="absolute top-0 left-0 right-0 bottom-0 opacity-20 bg-cover h-full w-full hover:opacity-55"
+              className="absolute top-0 left-0 right-0 bottom-0 opacity-30 bg-cover h-full w-full hover:opacity-55"
               style={{
                 backgroundImage: `url(${project.backgroundImage})`, // Set dynamic background image
                 backgroundPosition: "center",
@@ -109,7 +110,7 @@ function Work() {
             >
               <div className="flex flex-col text-white px-3 h-[100%]">
                 <p className="text-text-secondary pt-2">Featured Project</p>
-                <h3 className="text-lg font-bold text-white pt-3">
+                <h3 className="text-lg font-bold text-white pt-3 hover:text-text-secondary cursor-pointer">
                   {project.name}
                 </h3>
                 <p className="pt-5 text-text-primary">{project.description}</p>
@@ -144,6 +145,7 @@ function Work() {
             </div>
           </article>
         ))}
+
       </div>
     </div>
   );

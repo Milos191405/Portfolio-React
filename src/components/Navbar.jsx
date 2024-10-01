@@ -115,7 +115,7 @@ function Navbar() {
       )}
 
       {/* Social Icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+      <div className="hidden md:flex fixed flex-col top-[35%] left-0">
         <ul>
           {socialLinks.map(({ href, label, icon, bgColor }) => (
             <li

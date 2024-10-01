@@ -50,7 +50,7 @@ function Contact() {
       </div>
       <div className=" bottom-0  justify-center  ">
         <div className=" flex space-x-1 justify-center  ">
-          {socialLinks.map(({ href, label, icon, bgColor }) => (
+          {socialLinks.map(({ href, label, icon }) => (
             <a
               key={href}
               href={href}
@@ -63,7 +63,7 @@ function Contact() {
             </a>
           ))}
         </div>
-        <div className="text-text-primary text-center">Designed and Built by Milos Mirkovic</div>
+        <div className="text-text-primary text-center text-sm">Designed and Built by Milos Mirkovic</div>
       </div>
     </section>
   );
