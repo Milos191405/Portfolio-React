@@ -31,10 +31,7 @@ const socialLinks = [
 
 function Contact() {
   return (
-    <section
-      name="contact"
-      className="w-full  bg-[#0a192f]  p-4 pt-16  "
-    >
+    <section id="contact" className="w-full  bg-[#0a192f]  p-4 pt-16  ">
       <div className=" flex flex-col items-center justify-center w-full mb-40 ">
         <p className="text-sm text-center text-blue-600 mb-1">What's next?</p>
         <p className="text-xl text-center  text-gray-300 mb-3">Contact</p>
@@ -44,8 +41,13 @@ function Contact() {
           if you have advice or opportunities for collaboration! I’d love to
           connect, exchange ideas, and expand my network.
         </p>
-        <div className="border  border-blue-600 mt-5  ">
-          <button className="text-blue-600 p-2 ">Let's talk</button>
+        <div className="mt-5">
+          <a
+            href="mailto:milos.mirkovic7@gmail.com?subject=Request for collaboration&body=Contents of email"
+            className="custom-button text-text-secondary border-[1px] inline-flex items-center border-text-secondary text-sm px-2 py-2 rounded-md z-10"
+          >
+            Let's talk
+          </a>
         </div>
       </div>
       <div className=" bottom-0  justify-center  ">
@@ -63,7 +65,9 @@ function Contact() {
             </a>
           ))}
         </div>
-        <div className="text-text-primary text-center text-sm">Designed and Built by Milos Mirkovic</div>
+        <div className="text-text-primary text-center text-sm">
+          Designed and Built by Milos Mirkovic
+        </div>
       </div>
     </section>
   );

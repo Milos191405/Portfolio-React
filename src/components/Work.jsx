@@ -1,3 +1,4 @@
+
 import { FaGithub, FaExternalLinkAlt, FaFolder } from "react-icons/fa";
 import MentorMate from "../assets/Work/mentor.png";
 import excel from "../assets/Work/excelConverter.png";
@@ -67,13 +68,13 @@ const projects = [
 function Work() {
   return (
     <div
-      name="work"
+      id="work"
       className="pt-14  min-h-screen bg-[#0a192f] text-gray-300  items-center px-6"
     >
       {/* container */}
-      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full pt-20  ">
+      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full   ">
         <div className="">
-          <p className="text-xl font-bold  text-grey-300 border-b-2  border-blue-600">
+          <p className="text-xl font-bold  text-grey-300 inline border-b-2  border-blue-600">
             Work
           </p>
           <p className=" py-4">

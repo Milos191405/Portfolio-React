@@ -1,15 +1,17 @@
-const About = () => {
+const About = ({isNavOpen}) => {
   return (
     <section
-      name="about"
-      className="w-full min-h-screen pt-[80px] bg-[#0a192f] text-gray-300 flex items-center"
+      id="about"
+      className={`w-full min-h-screen bg-[#0a192f] text-gray-300 flex items-center ${
+        isNavOpen ? "pt-[100px]" : "pt-0"
+      }`}
       aria-labelledby="about-heading"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <header className="max-w-[1000px] w-full px-6 ">
           <h2
             id="about-heading"
-            className="text-left text-xl font-bold border-b-2 border-blue-600  "
+            className="text-left text-xl font-bold inline border-b-2 border-blue-600  "
           >
             About Me
           </h2>

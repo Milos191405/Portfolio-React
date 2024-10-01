@@ -1,14 +1,5 @@
-.custom-button {
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); /* Smooth transition */
+html {
+  scroll-behavior: smooth;
 }
 
-.custom-button:hover,
-.custom-button:focus-visible {
-  outline: none;
-  box-shadow: 20px 20px 0 0 var(--text-secondary); /* Same color as the border */
-  transform: translate(-50px, -50px); /* Moves the button up and to the left */
-}
 
-.custom-button:after {
-  display: none !important;
-}
