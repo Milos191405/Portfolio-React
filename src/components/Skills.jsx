@@ -26,13 +26,15 @@ const Skills = () => {
       className="w-full min-h-screen bg-[#0a192f] text-gray-300 flex items-center justify-center px-6 "
     >
       {/* Container */}
-      <div className="max-w-[1000px] xl:max-w-[1200px] mx-auto  flex flex-col justify-center w-full h-full md:max-w-[700px] md:mx-auto">
+      <div className="max-w-[1000px] md:max-w-[700px] xl:max-w-[1200px] mx-auto  flex flex-col justify-center w-full h-full  md:mx-auto">
         {/* Title */}
         <header>
           <h2 className="text-xl md:text-2xl xl:text-3xl font-bold inline border-b-2 border-blue-600">
             Skills
           </h2>
-          <p className="py-4 md:text-lg xl:text-2xl">These are the technologies I’ve worked with</p>
+          <p className="py-4 md:text-lg xl:text-2xl">
+            These are the technologies I’ve worked with
+          </p>
         </header>
 
         {/* Skill Icons */}

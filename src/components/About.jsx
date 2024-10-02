@@ -7,7 +7,7 @@ const About = ({isNavOpen}) => {
       }`}
       aria-labelledby="about-heading"
     >
-      <div className="flex flex-col justify-center items-center w-full h-full md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] md:mx-auto ">
+      <div className="flex flex-col justify-center items-center w-full h-full md:max-w-[700px]  xl:max-w-[1200px] md:mx-auto ">
         <header className="w-full px-6 lg:px-0 ">
           <h2
             id="about-heading"

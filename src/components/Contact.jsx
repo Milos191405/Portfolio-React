@@ -32,7 +32,7 @@ const socialLinks = [
 function Contact() {
   return (
     <section id="contact" className="w-full  bg-[#0a192f]  p-4 pt-16  ">
-      <div className=" flex flex-col items-center lg:items-start justify-center w-full mb-40 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1200px] md:mx-auto  ">
+      <div className=" flex flex-col items-center lg:items-start justify-center w-full mb-40 md:max-w-[700px]  xl:max-w-[1200px] md:mx-auto  ">
         {/* <p className="text-sm text-center text-blue-600 mb-1 md:text-base">What's next?</p> */}
         <p className="text-xl md:text-2xl xl:text-4xl inline border-b-2 border-blue-600  text-center font-bold   text-gray-300 mb-3 lg:mb-10">
           Contact

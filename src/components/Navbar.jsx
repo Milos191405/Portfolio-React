@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll"; // Rename to avoid confusion
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import LogoCrop from "../assets/LogoCrop.jpg";
+import Logo from "../assets/Logo.png";
 
 const navLinks = [
   { to: "home", label: "Home" },
@@ -79,9 +79,9 @@ function Navbar() {
       <div>
         <ScrollLink to="home" smooth={true} duration={800}>
           <img
-            src={LogoCrop}
+            src={Logo}
             alt="Logo"
-            className="w-[80px]  lg:w-[100px] cursor-pointer"
+            className="h-[80px] p-2  lg:h-[100px] lg:p-2 cursor-pointer"
           />
         </ScrollLink>
       </div>

@@ -84,7 +84,7 @@ function Work() {
           <article
             key={index}
             id="work"
-            className="relative  mb-10 mt-8 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1500px]  lg:grid lg:grid-cols-12"
+            className="relative  mb-10 mt-8 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1500px] lg:  lg:grid lg:grid-cols-12"
           >
             {/* First div (Background Image) */}
             <div
@@ -104,10 +104,10 @@ function Work() {
             </div>
             {/* Second div (Content) */}
             <div
-              className="relative flex justify-center items-center h-full w-full z-10 lg:col-start-6 lg:col-end-12   "
+              className="relative flex justify-center items-center h-full w-full z-10 lg:col-start-6 lg:col-end-13 lg:px-3  "
               style={{ backgroundColor: "var(--bg-primary)" }}
             >
-              <div className="flex flex-col text-white  px-3 lg:px-0 h-[100%] lg:text-end ">
+              <div className="flex flex-col text-white  px-3  lg:px-0 h-[100%] lg:text-end ">
                 <p className="text-text-secondary md:text-lg xl:text-xl  pt-2">
                   Featured Project
                 </p>
