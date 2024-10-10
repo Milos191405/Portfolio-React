@@ -6,17 +6,21 @@ import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import Node from "../assets/node.png";
 import MongoDB from "../assets/mongo.png";
+import Redux from "../assets/redux.png";
+import Bootstrap from "../assets/bootstrap.png";
 
 // Array of skill data
 const skills = [
   { name: "HTML", img: HTML },
   { name: "CSS", img: CSS },
+  { name:"Bootstrap", img: Bootstrap },
   { name: "JavaScript", img: JavaScript },
   { name: "React", img: ReactImg },
   { name: "GitHub", img: GitHub },
   { name: "Tailwind", img: Tailwind },
   { name: "Node.js", img: Node },
   { name: "MongoDB", img: MongoDB },
+  { name: "Redux", img: Redux },
 ];
 
 const Skills = () => {
