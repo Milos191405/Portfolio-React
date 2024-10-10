@@ -1,5 +1,5 @@
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaCertificate } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 const socialLinks = [
@@ -26,6 +26,12 @@ const socialLinks = [
     label: "Resume",
     icon: <BsFillPersonLinesFill size={30} />,
     bgColor: "bg-[#565f69]",
+  },
+  {
+    href: "/DCI.pdf",
+    label: "Certificates",
+    icon: <FaCertificate size={30} />,
+    bgColor: "bg-blue-600",
   },
 ];
 

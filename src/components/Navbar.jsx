@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom"; // Correctly import Link
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll"; // Rename to avoid confusion
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub, FaLinkedin,FaCertificate } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Logo from "../assets/Logo.png";
@@ -39,6 +39,15 @@ const socialLinks = [
     icon: <BsFillPersonLinesFill size={30} />,
     bgColor: "bg-[#565f69]",
   },
+  {
+    
+    href: "/DCI.pdf",
+    label: "Certificates",
+    icon: <FaCertificate size={30} />,
+    bgColor: "bg-blue-600",
+  
+  }
+
 ];
 
 function Navbar() {
@@ -156,12 +165,12 @@ function Navbar() {
             : "top-[50vh]"
         }`}
       >
-        {/* Your Navbar content goes here */}
+        {/*  Navbar content  */}
         <ul>
           {socialLinks.map(({ href, label, icon, bgColor }) => (
             <li
               key={href}
-              className={` hidden lg:flex lg:w-[160px] lg:h-[60px]   lg:justify-between lg:items-center ml-[-100px] hover:ml-0 pl-3 pr-3 duration-300 ${bgColor}`}
+              className={` hidden lg:flex lg:w-[180px] lg:h-[60px]   lg:justify-between lg:items-center ml-[-120px] hover:ml-0 pl-3 pr-3 duration-300 ${bgColor}`}
             >
               <a
                 className="flex justify-between items-center w-full text-gray-300"
