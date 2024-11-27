@@ -19,15 +19,15 @@ const About = ({isNavOpen}) => {
         <div className="max-w-[1000px] xl:max-w-[1200px] w-full grid grid-cols-1 gap-8 px-6 py-8 lg:px-0 ">
           <article className="text-left text-sm md:text-base xl:text-xl space-y-5">
             <p>
-              Hi! I'm Milos, and I enjoy creating innovative solutions for the
+              Hi! I`m Milos, and I enjoy creating innovative solutions for the
               web. My interest in web development has been long-standing, but I
-              haven’t had the opportunity to fully dedicate myself to it until
+              haven`t had the opportunity to fully dedicate myself to it until
               now.
             </p>
             <p>
               My background in sports has taught me valuable skills in both
               independent work and teamwork, fostering a strong work ethic and
-              discipline. I’m currently completing a one-year intensive web
+              discipline. I finished a one-year intensive web
               development course, where I’ve gained hands-on experience with
               frontend technologies such as{" "}
               <span className="text-text-secondary">HTML</span>,{" "}
@@ -38,12 +38,9 @@ const About = ({isNavOpen}) => {
               <span className="text-text-secondary">Node.js</span> and{" "}
               <span className="text-text-secondary">Express</span>.
             </p>
-            <p>
-              Looking ahead, I am eager to continue advancing in my career as a
-              web developer. I am committed to learning and mastering new
-              technologies, staying up-to-date with industry trends, and
-              applying my skills to build impactful and innovative web
-              solutions.
+            
+            <p>I`m continuously working on my professional development and look forward to joining a team where 
+              I can contribute to the company`s success and grow as a developer.
             </p>
           </article>
         </div>

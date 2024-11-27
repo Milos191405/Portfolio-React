@@ -1,10 +1,10 @@
-import { Link, NavLink } from "react-router-dom"; // Correctly import Link
+//import { Link, NavLink } from "react-router-dom"; 
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll"; // Rename to avoid confusion
+import { Link as ScrollLink } from "react-scroll"; 
 import { FaBars, FaTimes, FaGithub, FaLinkedin,FaCertificate } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/MLogo4.gif";
 
 const navLinks = [
   { to: "home", label: "Home" },
@@ -41,7 +41,7 @@ const socialLinks = [
   },
   {
     
-    href: "/DCI.pdf",
+    href: "/CertificateDCI.pdf",
     label: "Certificates",
     icon: <FaCertificate size={30} />,
     bgColor: "bg-blue-600",
@@ -80,7 +80,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`w-full fixed top-0 h-[80px] lg:h-[100px] flex flex-row items-center justify-between bg-bg-primary px-4 text-gray-300 border-b-[1px] border-white z-50 transition-transform duration-300 ${
+      className={`w-full fixed top-0 h-[80px] lg:h-[100px]  flex flex-row items-center justify-between bg-bg-primary px-4 text-gray-300 border-b-[1px] border-white z-50 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -90,7 +90,7 @@ function Navbar() {
           <img
             src={Logo}
             alt="Logo"
-            className="h-[80px] p-2  lg:h-[100px] lg:p-2 cursor-pointer"
+            className="h-[80px] p-2  lg:h-[100px]  lg:p-2 cursor-pointer "
           />
         </ScrollLink>
       </div>

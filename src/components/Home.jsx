@@ -20,9 +20,9 @@ function Home() {
         </p>
         <div className="mt-4">
           <ScrollLink
-            to="work" 
-            smooth={true} 
-            duration={800} 
+            to="work"
+            smooth={true}
+            duration={800}
             aria-label="View my work portfolio"
             className="custom-button text-text-secondary cursor-pointer md:text-lg lg:text-base border-[1px] inline-flex border-text-secondary text-sm xl:text-lg px-2 py-2 rounded-md  items-center z-10 mt-4"
           >
