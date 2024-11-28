@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { FaBars, FaTimes, FaGithub, FaLinkedin,FaCertificate } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import Logo from "../assets/MLogo4.gif";
+import Logo from "../assets/MLogo2.png";
 
 const navLinks = [
   { to: "home", label: "Home" },
