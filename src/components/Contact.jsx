@@ -28,7 +28,7 @@ const socialLinks = [
     bgColor: "bg-[#565f69]",
   },
   {
-    href: "/DCI.pdf",
+    href: "/CertificateDCI.pdf",
     label: "Certificates",
     icon: <FaCertificate size={30} />,
     bgColor: "bg-blue-600",
