@@ -8,6 +8,9 @@ import Node from "../assets/node.png";
 import MongoDB from "../assets/mongo.png";
 import Redux from "../assets/redux.png";
 import Bootstrap from "../assets/bootstrap.png";
+import python from "../assets/python.png";
+import postgreSQL from "../assets/postgresql.png";
+import pandas from "../assets/pandas.png";
 
 // Array of skill data
 const skills = [
@@ -20,7 +23,9 @@ const skills = [
   { name: "Tailwind", img: Tailwind },
   { name: "Node.js", img: Node },
   { name: "MongoDB", img: MongoDB },
-  { name: "Redux", img: Redux },
+  { name: "Python", img:python },
+  { name: "PostgreSQL",img:postgreSQL},
+  { name: "Pandas",img:pandas}
 ];
 
 const Skills = () => {
@@ -42,11 +47,11 @@ const Skills = () => {
         </header>
 
         {/* Skill Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-8 text-center  py-8 ">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-8 text-center py-8">
           {skills.map((skill, index) => (
             <article
               key={index}
-              className="shadow-md shadow-[#e5e7e8] hover:scale-110 transition-transform duration-500"
+              className="shadow-md shadow-[#e5e7e8] hover:scale-110 transition-transform duration-500 "
             >
               <img
                 className="w-16 xl:w-20 mx-auto pt-2 xl:pt-5"

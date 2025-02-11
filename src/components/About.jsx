@@ -18,29 +18,28 @@ const About = ({isNavOpen}) => {
         </header>
         <div className="max-w-[1000px] xl:max-w-[1200px] w-full grid grid-cols-1 gap-8 px-6 py-8 lg:px-0 ">
           <article className="text-left text-sm md:text-base xl:text-xl space-y-5">
-            <p>
-              Hi! I`m Milos, and I enjoy creating innovative solutions for the
-              web. My interest in web development has been long-standing, but I
-              haven`t had the opportunity to fully dedicate myself to it until
-              now.
+
+            <p className="text-left text-sm md:text-base xl:text-xl space-y-5 ">
+            Hi! I'm Milos, and I have a passion for creating innovative web solutions and analyzing data to drive insights.
             </p>
-            <p>
-              My background in sports has taught me valuable skills in both
-              independent work and teamwork, fostering a strong work ethic and
-              discipline. I finished a one-year intensive web
-              development course, where I’ve gained hands-on experience with
-              frontend technologies such as{" "}
-              <span className="text-text-secondary">HTML</span>,{" "}
-              <span className="text-text-secondary">CSS</span>,{" "}
-              <span className="text-text-secondary">JavaScript</span>, and{" "}
-              <span className="text-text-secondary">React</span> as well as
-              backend technologies including{" "}
-              <span className="text-text-secondary">Node.js</span> and{" "}
-              <span className="text-text-secondary">Express</span>.
+            <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
+            My journey into web development has been fueled by a long-standing interest, and now I’m fully dedicated to mastering the craft.
+            Coming from a sports background, I’ve developed a strong work ethic, discipline, and valuable skills in both independent work and teamwork.
             </p>
-            
-            <p>I`m continuously working on my professional development and look forward to joining a team where 
-              I can contribute to the company`s success and grow as a developer.
+            <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
+            After completing an intensive one-year web development course, I gained hands-on experience with frontend technologies like 
+            <span className="text-text-secondary"> HTML, CSS, JavaScript</span>, and <span className="text-text-secondary">React </span>, 
+            as well as backend technologies like <span className="text-text-secondary">Node.js</span >  and <span className="text-text-secondary">Express</span>.
+            Additionally, I have specialized in data analysis using <span className="text-text-secondary">Python</span> and <span className="text-text-secondary">PostgreSQL</span>, 
+            having completed various projects involving <span className="text-text-secondary">SQL</span> and <span className="text-text-secondary">Python</span>.
+            My data analysis skills include proficiency with libraries such as <span className="text-text-secondary"> Pandas, Matplotlib, Seaborn,</span> and  <span className="text-text-secondary">NumPy</span>.
+            </p>
+            <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
+            Currently, I'm furthering my skills through a data analysis training program and am eager to expand my knowledge in this area.
+            </p>
+            <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
+            Continuous professional development is a priority, with a keen interest in joining a team where I can contribute to its success while growing as a developer and data analyst. 
+            I am passionate about working in both fields, web development and data analysis, and look forward to combining my skills to make a meaningful impact.
             </p>
           </article>
         </div>

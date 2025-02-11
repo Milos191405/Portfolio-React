@@ -11,12 +11,19 @@ function Home() {
           Milos Mirkovic
         </h1>
         <h2 className="text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-bold text-text-primary">
-          I build things for the web
+        I analyze and build thing for the web
         </h2>
         <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-4">
-          My focus is on frontend development, with expertise in HTML, CSS,
-          JavaScript, and React. I also have a solid foundation in backend
-          technologies like Node.js and Express.
+        Web developer and data analyst, former athlete, and tech enthusiast driven by a 
+        passion for creating innovative web solutions and analyzing data to drive insights. 
+      
+        </p>
+        <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-2" >
+        Currently enrolled in a data analysis training program, I'm eager to expand my knowledge and skills in this field.
+        </p>
+        <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-4">
+        My experience extends to freelance projects, where I've brought innovative solutions to life. 
+        I am excited to leverage my expertise in both web development and data analysis for impactful roles in the industry.
         </p>
         <div className="mt-4">
           <ScrollLink

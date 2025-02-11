@@ -3,6 +3,7 @@ import { FaGithub, FaExternalLinkAlt, FaFolder } from "react-icons/fa";
 import MentorMate from "../assets/Work/mentor.png";
 import excel from "../assets/Work/excelConverter.png";
 import igraliste from "../assets/Work/igraliste.png";
+import buekom from "../assets/Work/Buekom.png";
 
 
 const projects = [
@@ -21,6 +22,26 @@ const projects = [
       {
         href: "https://mentor-mate-frontend.onrender.com/",
         label: "Visit MentorMate",
+        icon: <FaExternalLinkAlt size={25} />,
+      },
+    ],
+  },
+  {
+    name: "Buekom Help Center",
+    backgroundImage: buekom, 
+    description:
+      "Internal application for company Buekom to help employees with their Markdown files which they are using almost every day. Their is option that they can make admin or guest accounts and manage files. Backend is made with Node.js and Express.js and frontend with React.", 
+      
+    technologies: ["React", "Tailwind", "Node.js", "Express.js"],
+    socialLinks: [
+      {
+        href: "https://github.com/Milos191405/buekom-help-center",
+        label: "GitHub Repository",
+        icon: <FaGithub size={25} />,
+      },
+      {
+        href: "https://buekom-help-center.onrender.com//",
+        label: "Visit Buekom help center",
         icon: <FaExternalLinkAlt size={25} />,
       },
     ],
@@ -72,7 +93,7 @@ function Work() {
       className="pt-14  min-h-screen bg-[#0a192f] text-gray-300  items-center px-6"
     >
       {/* container */}
-      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full md:max-w-[700px] xl:max-w-[1200px] md:mx-auto  ">
+      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full md:max-w-[700px] xl:max-w-[1200px] md:mx-auto">
         <div className="">
           <p className="text-xl md:text-2xl xl:text-4xl font-bold  text-grey-300 inline border-b-2  border-blue-600">
             Work
