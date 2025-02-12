@@ -34,7 +34,7 @@ const socialLinks = [
     bgColor: "bg-[#6fc2b0]",
   },
   {
-    href: "/MilosResume.pdf",
+    href: "/Milos Mirkovic CV.pdf",
     label: "Resume",
     icon: <BsFillPersonLinesFill size={30} />,
     bgColor: "bg-[#565f69]",
