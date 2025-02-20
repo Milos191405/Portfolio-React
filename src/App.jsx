@@ -12,14 +12,14 @@ import "./index.css";
 
 function App() {
   return (
- 
+
     <>
       <Navbar />
       <Home />
       <About />
       <Skills />
-       <Work/> 
-       <Contact/> 
+      <Work/> 
+      <Contact/> 
     </>
   );
 }
