@@ -11,19 +11,19 @@ function Home() {
           Milos Mirkovic
         </h1>
         <h2 className="text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-bold text-text-primary">
-        I analyze and build thing for the web
+        I build for the web and uncover insights through data
         </h2>
         <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-4">
-        Web developer and data analyst, former athlete, and tech enthusiast driven by a 
-        passion for creating innovative web solutions and analyzing data to drive insights. 
+        I'm a web developer with 2+ years of experience, combining technical creativity with analytical thinking. A former athlete and lifelong tech enthusiast, 
+        I’m passionate about building intuitive, responsive web solutions and using data to tell powerful stories.
       
         </p>
         <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-2" >
         Currently enrolled in a data analysis training program, I'm eager to expand my knowledge and skills in this field.
         </p>
         <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-4">
-        My experience extends to freelance projects, where I've brought innovative solutions to life. 
-        I am excited to leverage my expertise in both web development and data analysis for impactful roles in the industry.
+        Most recently, I worked as a JavaScript Developer at Kontera Soft (remote, 2+ years), where I contributed to diverse projects—ranging 
+        from lean tools to large-scale platforms—focused on both code and data solutions.
         </p>
         <div className="mt-4">
           <ScrollLink

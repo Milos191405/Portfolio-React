@@ -11,12 +11,13 @@ import Bootstrap from "../assets/bootstrap.png";
 import python from "../assets/python.png";
 import postgreSQL from "../assets/postgresql.png";
 import pandas from "../assets/pandas.png";
+import git from "../assets/git.png";
 
 // Array of skill data
 const skills = [
   { name: "HTML", img: HTML },
   { name: "CSS", img: CSS },
-  { name:"Bootstrap", img: Bootstrap },
+  { name:"git", img: git },
   { name: "JavaScript", img: JavaScript },
   { name: "React", img: ReactImg },
   { name: "GitHub", img: GitHub },

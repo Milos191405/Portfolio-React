@@ -1,4 +1,4 @@
-const About = ({isNavOpen}) => {
+const About = ({ isNavOpen }) => {
   return (
     <section
       id="about"
@@ -18,28 +18,24 @@ const About = ({isNavOpen}) => {
         </header>
         <div className="max-w-[1000px] xl:max-w-[1200px] w-full grid grid-cols-1 gap-8 px-6 py-8 lg:px-0 ">
           <article className="text-left text-sm md:text-base xl:text-xl space-y-5">
-
             <p className="text-left text-sm md:text-base xl:text-xl space-y-5 ">
-            Hi! I'm Milos, and I have a passion for creating innovative web solutions and analyzing data to drive insights.
+              Hi! I'm Milos — a web developer and data analyst passionate about building intuitive digital solutions and translating data into clear, impactful insights.
             </p>
             <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
-            My journey into web development has been fueled by a long-standing interest, and now I’m fully dedicated to mastering the craft.
-            Coming from a sports background, I’ve developed a strong work ethic, discipline, and valuable skills in both independent work and teamwork.
+              With a background in sports, I bring a strong work ethic, focus, and adaptability to everything I do. My journey into web development began with curiosity and quickly became a career path that I'm fully committed to mastering.
             </p>
             <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
-            After completing an intensive one-year web development course, I gained hands-on experience with frontend technologies like 
-            <span className="text-text-secondary"> HTML, CSS, JavaScript</span>, and <span className="text-text-secondary">React </span>, 
-            as well as backend technologies like <span className="text-text-secondary">Node.js</span >  and <span className="text-text-secondary">Express</span>.
-            Additionally, I have specialized in data analysis using <span className="text-text-secondary">Python</span> and <span className="text-text-secondary">PostgreSQL</span>, 
-            having completed various projects involving <span className="text-text-secondary">SQL</span> and <span className="text-text-secondary">Python</span>.
-            My data analysis skills include proficiency with libraries such as <span className="text-text-secondary"> Pandas, Matplotlib, Seaborn,</span> and  <span className="text-text-secondary">NumPy</span>.
+              After completing a full-year web development course, I gained hands-on experience using frontend tools like
+              <span className="text-text-secondary"> HTML, CSS, JavaScript</span>, and <span className="text-text-secondary">React</span>,
+              along with backend technologies such as <span className="text-text-secondary">Node.js</span> and <span className="text-text-secondary">Express</span>.
+              My skill set expanded further through a completed <span className="text-text-secondary">Data Analytics Bootcamp</span>, where I worked on real-world projects using
+              <span className="text-text-secondary"> Python</span>, <span className="text-text-secondary">PostgreSQL</span>, and libraries like <span className="text-text-secondary">Pandas, NumPy, Matplotlib</span>, and <span className="text-text-secondary">Seaborn</span>.
             </p>
             <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
-            Currently, I'm furthering my skills through a data analysis training program and am eager to expand my knowledge in this area.
+              From January 2022 to October 2024, I worked remotely as a <span className="text-text-secondary">JavaScript Developer</span> at Kontera Soft. During this time, I bootstrapped new projects, maintained and optimized existing codebases, structured databases, organized datasets, and built data visualizations across a wide range of projects—from small tools to large-scale platforms.
             </p>
             <p className="text-left text-sm md:text-base xl:text-xl space-y-5 mb-1">
-            Continuous professional development is a priority, with a keen interest in joining a team where I can contribute to its success while growing as a developer and data analyst. 
-            I am passionate about working in both fields, web development and data analysis, and look forward to combining my skills to make a meaningful impact.
+              I'm passionate about working at the intersection of web development and data, and I’m excited to bring value to teams that are driven by innovation and impact. Whether it’s designing a seamless frontend or uncovering stories within data, I strive to contribute meaningfully and continuously grow.
             </p>
           </article>
         </div>
