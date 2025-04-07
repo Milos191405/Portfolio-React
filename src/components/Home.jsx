@@ -19,23 +19,29 @@ function Home() {
       
         </p>
         <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-2" >
-        Currently enrolled in a data analysis training program, I'm eager to expand my knowledge and skills in this field.
+        I recently completed a data analytics bootcamp, where I honed my skills in data wrangling, visualization, and insight-driven analysis.
         </p>
         <p className="text-sm md:text-base xl:text-xl mb-1 text-text-primary py-4">
-        Most recently, I worked as a JavaScript Developer at Kontera Soft (remote, 2+ years), where I contributed to diverse projects—ranging 
-        from lean tools to large-scale platforms—focused on both code and data solutions.
-        </p>
-        <div className="mt-4">
-          <ScrollLink
-            to="work"
-            smooth={true}
-            duration={800}
-            aria-label="View my work portfolio"
-            className="custom-button text-text-secondary cursor-pointer md:text-lg lg:text-base border-[1px] inline-flex border-text-secondary text-sm xl:text-lg px-2 py-2 rounded-md  items-center z-10 mt-4"
-          >
-            View My Work
-          </ScrollLink>
-        </div>
+  I worked as a JavaScript Developer at Kontera Soft (remote, 2+ years), contributing to a range of projects—from lean tools to complex, data-driven platforms—
+  with a focus on both front-end development and back-end data architecture.
+</p>
+
+{/* <p className="text-sm md:text-base xl:text-xl text-text-primary">
+  Curious to see what I’ve been working on?
+</p> */}
+
+<div className="mt-4">
+  <ScrollLink
+    to="work"
+    smooth={true}
+    duration={800}
+    aria-label="View my work portfolio"
+    className="custom-button text-text-secondary cursor-pointer md:text-lg lg:text-base border-[1px] inline-flex border-text-secondary text-sm xl:text-lg px-2 py-2 rounded-md  items-center z-10 mt-4"
+  >
+    View My Work
+  </ScrollLink>
+</div>
+
       </div>
     </div>
   );
