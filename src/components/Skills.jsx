@@ -1,68 +1,56 @@
-import HTML from "../assets/html.png";
-import CSS from "../assets/css.png";
-import JavaScript from "../assets/javascript.png";
-import ReactImg from "../assets/react.png";
-import GitHub from "../assets/github.png";
-import Tailwind from "../assets/tailwind.png";
-import Node from "../assets/node.png";
-import MongoDB from "../assets/mongo.png";
-import Redux from "../assets/redux.png";
-import Bootstrap from "../assets/bootstrap.png";
-import python from "../assets/python.png";
-import postgreSQL from "../assets/postgresql.png";
-import pandas from "../assets/pandas.png";
-import git from "../assets/git.png";
+import FadeIn from "../components/FadeIn";
 
-// Array of skill data
-const skills = [
-  { name: "HTML", img: HTML },
-  { name: "CSS", img: CSS },
-  { name:"git", img: git },
-  { name: "JavaScript", img: JavaScript },
-  { name: "React", img: ReactImg },
-  { name: "GitHub", img: GitHub },
-  { name: "Tailwind", img: Tailwind },
-  { name: "Node.js", img: Node },
-  { name: "MongoDB", img: MongoDB },
-  { name: "Python", img:python },
-  { name: "PostgreSQL",img:postgreSQL},
-  { name: "Pandas",img:pandas}
+const skillSections = [
+  {
+    title: "Frontend Development",
+    skills: "HTML5 • CSS3 • JavaScript (ES6+) • React.js • Next.js • Tailwind CSS • Bootstrap",
+  },
+  {
+    title: "Backend Development & Tools",
+    skills: "Node.js • Express.js • MongoDB • Git • GitHub • GitFlow",
+  },
+  {
+    title: "Data Analysis",
+    skills: "Python • Pandas • NumPy • Matplotlib • Seaborn • SQL • PostgreSQL • Power BI",
+  },
 ];
 
-const Skills = () => {
+const Skills = ({ isNavOpen }) => {
   return (
     <section
       id="skills"
-      className="w-full min-h-screen bg-[#0a192f] text-gray-300 flex items-center justify-center px-6 "
+      className={`w-full ${
+        isNavOpen ? "min-h-[calc(100vh-80px)]" : "min-h-screen"
+      } bg-[#0a192f] text-gray-300 flex items-center justify-center px-6`}
     >
-      {/* Container */}
-      <div className="max-w-[1000px] md:max-w-[700px] xl:max-w-[1200px] mx-auto  flex flex-col justify-center w-full h-full  md:mx-auto">
-        {/* Title */}
-        <header>
-          <h2 className="text-xl md:text-2xl xl:text-3xl font-bold inline border-b-2 border-blue-600">
-            Skills
-          </h2>
-          <p className="py-4 md:text-lg xl:text-2xl">
-            These are the technologies I’ve worked with
-          </p>
-        </header>
+      <div className="md:max-w-[700px] xl:max-w-[1200px] mx-auto flex flex-col justify-center w-full h-full space-y-10">
+        
+        {/* Header */}
+        <FadeIn>
+          <header>
+            <h2 className="text-xl md:text-2xl xl:text-3xl font-bold border-b-2 border-blue-600 inline-block">
+              Skills
+            </h2>
+            <p className="py-4 md:text-lg xl:text-2xl text-gray-400">
+              Technologies and tools I work with to build intuitive digital products and deliver actionable insights.
+            </p>
+          </header>
+        </FadeIn>
 
-        {/* Skill Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-8 text-center py-8">
-          {skills.map((skill, index) => (
-            <article
-              key={index}
-              className="shadow-md shadow-[#e5e7e8] hover:scale-110 transition-transform duration-500 "
-            >
-              <img
-                className="w-16 xl:w-20 mx-auto pt-2 xl:pt-5"
-                src={skill.img}
-                alt={`${skill.name} icon`}
-              />
-              <p className="my-4 text-sm xl:text-lg">{skill.name}</p>
-            </article>
-          ))}
-        </div>
+        {/* Skill Sections */}
+        {skillSections.map((section, index) => (
+          <FadeIn key={index} delay={index * 0.2}>
+            <div>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-blue-400">
+                {section.title}
+              </h3>
+              <p className="text-sm md:text-base xl:text-lg text-gray-200 leading-relaxed">
+                {section.skills}
+              </p>
+            </div>
+          </FadeIn>
+        ))}
+
       </div>
     </section>
   );

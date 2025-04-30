@@ -1,9 +1,6 @@
-//import { Link, NavLink } from "react-router-dom"; 
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll"; 
-import { FaBars, FaTimes, FaGithub, FaLinkedin,FaCertificate } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Link as ScrollLink } from "react-scroll";
+import { FaArrowUp } from "react-icons/fa";
 import Logo from "../assets/MLogo2.png";
 
 const navLinks = [
@@ -14,178 +11,154 @@ const navLinks = [
   { to: "contact", label: "Contact" },
 ];
 
-const socialLinks = [
-  {
-    href: "https://www.linkedin.com/in/milos-mirkovic-7976726b/",
-    label: "LinkedIn",
-    icon: <FaLinkedin size={30} />,
-    bgColor: "bg-blue-600",
-  },
-  {
-    href: "https://github.com/Milos191405",
-    label: "GitHub",
-    icon: <FaGithub size={30} />,
-    bgColor: "bg-[#333333]",
-  },
-  {
-    href: "mailto:milos.mirkovic7@gmail.com?subject=Request for collaboration&body=Contents of email",
-    label: "Email",
-    icon: <HiOutlineMail size={30} />,
-    bgColor: "bg-[#6fc2b0]",
-  },
-  {
-    href: "/Milos Mirkovic CV.pdf",
-    label: "Resume",
-    icon: <BsFillPersonLinesFill size={30} />,
-    bgColor: "bg-[#565f69]",
-  },
-  {
-    
-    href: "/CertificateDCI.pdf",
-    label: "Certificates",
-    icon: <FaCertificate size={30} />,
-    bgColor: "bg-blue-600",
-  
-  }
-
-];
-
 function Navbar() {
   const [nav, setNav] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+  const [navHeight, setNavHeight] = useState(80);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   const handleClick = () => setNav(!nav);
   const closeMenu = () => setNav(false);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos > currentScrollPos) {
-      setVisible(true); // Show navbar when scrolling up
-    } else {
-      setVisible(false); // Hide navbar when scrolling down
-    }
-
-    setPrevScrollPos(currentScrollPos);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setShowScrollToTop(currentScrollPos > 300);
+      setPrevScrollPos(currentScrollPos);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
+  useEffect(() => {
+    const navbar = document.querySelector("nav");
+    if (navbar) {
+      setNavHeight(navbar.offsetHeight);
+    }
+
+    const handleResize = () => {
+      const navbar = document.querySelector("nav");
+      if (navbar) {
+        setNavHeight(navbar.offsetHeight);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = nav ? "hidden" : "auto";
+  }, [nav]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <nav
-      className={`w-full fixed top-0 h-[80px] lg:h-[100px]  flex flex-row items-center justify-between bg-bg-primary px-4 text-gray-300 border-b-[1px] border-white z-50 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      {/* Logo */}
-      <div>
-        <ScrollLink to="home" smooth={true} duration={800}>
+    <>
+      <nav
+        className={`fixed w-full z-50 top-0 px-4 flex items-center justify-between transition-all ease-in-out duration-500
+        ${visible ? "translate-y-0" : "-translate-y-full"}
+        ${prevScrollPos > 20 ? "h-[70px] bg-[#0a192f]/90 backdrop-blur-md" : "h-[80px] bg-bg-primary"}
+      `}
+      >
+        {/* Logo */}
+        <ScrollLink to="home" smooth={true} duration={800} offset={-navHeight}>
           <img
             src={Logo}
             alt="Logo"
-            className="h-[80px] p-2  lg:h-[100px]  lg:p-2 cursor-pointer "
+            className="h-[60px] lg:h-[60px] p-2 cursor-pointer z-50"
           />
         </ScrollLink>
-      </div>
-      {/* Desktop Menu */}
-      <ul className="hidden lg:flex gap-6 text-lg xl:text-xl cursor-pointer ">
-        {navLinks.map(({ to, label }) => (
-          <li key={to}>
-            <ScrollLink
-              to={to}
-              smooth={true}
-              duration={800}
-              onClick={closeMenu}
-              className="hover:text-text-secondary active:text-text-primary"
-            >
-              {label}
-            </ScrollLink>
-          </li>
-        ))}
-      </ul>
 
-      {/* Hamburger Icon */}
-      <div
-        onClick={handleClick}
-        className="lg:hidden z-10 cursor-pointer text-2xl"
-        aria-controls="mobile-menu"
-        aria-expanded={nav ? "true" : "false"}
-      >
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
-
-      {/* Mobile Menu */}
-      {nav && (
-        <>
-          <style>{`body { overflow: hidden; }`}</style>
-
-          <div className="fixed top-0 left-0 w-screen h-screen bg-[#0a192f]/10 text-gray-300 flex">
-            <div
-              className="w-1/4 h-screen top-[80px] backdrop-blur-sm z-50 relative"
-              onClick={closeMenu}
-            ></div>
-
-            <ul
-              id="mobile-menu"
-              className="pt-[200px] w-3/4 h-screen bg-[#111f4d] text-text-secondary flex flex-col items-center z-20 relative"
-            >
-              {navLinks.map(({ to, label }) => (
-                <li
-                  key={to}
-                  onClick={closeMenu}
-                  className="text-base p-5 text-center hover:bg-white hover:text-gray-700"
-                >
-                  <ScrollLink
-                    to={to}
-                    smooth={true}
-                    duration={800}
-                    onClick={closeMenu}
-                  >
-                    {label}
-                  </ScrollLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </>
-      )}
-
-      {/* Social Icons */}
-      <div
-        className={`fixed left-0 transition-all duration-300 ${
-          visible
-            ? "top-[calc(50vh-80px)] xl:top-[calc(50vh-100px)]"
-            : "top-[50vh]"
-        }`}
-      >
-        {/*  Navbar content  */}
-        <ul>
-          {socialLinks.map(({ href, label, icon, bgColor }) => (
-            <li
-              key={href}
-              className={` hidden lg:flex lg:w-[180px] lg:h-[60px]   lg:justify-between lg:items-center ml-[-120px] hover:ml-0 pl-3 pr-3 duration-300 ${bgColor}`}
-            >
-              <a
-                className="flex justify-between items-center w-full text-gray-300"
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex gap-6 text-lg xl:text-xl text-header">
+          {navLinks.map(({ to, label }) => (
+            <li key={to} className="cursor-pointer">
+              <ScrollLink
+                activeClass="text-blue-400"
+                to={to}
+                smooth={true}
+                duration={800}
+                
+                spy={true}
+                className="hover:text-blue-400 transition-colors duration-300"
               >
-                {label} {icon}
-              </a>
+                {label}
+              </ScrollLink>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+
+        {/* Hamburger Icon */}
+        <div
+          onClick={handleClick}
+          className="lg:hidden z-50 w-10 h-10 flex flex-col justify-center items-center cursor-pointer group"
+        >
+          <span
+            className={`block h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
+              nav ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-white my-1 transition-all duration-300 ease-in-out ${
+              nav ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
+              nav ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          />
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`fixed top-0 left-0 w-full h-screen bg-[#0a192fd9] backdrop-blur-md transition-all duration-500 ease-in-out flex flex-col items-center z-40 text-white 
+          ${nav ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
+        `}
+        >
+          {/* Logo inside mobile menu */}
+          <div className="absolute top-4 left-4">
+            <img src={Logo} alt="Logo" className="h-[50px]" />
+          </div>
+
+          {/* Mobile Nav Items */}
+          <ul className="flex flex-col gap-10 text-3xl font-semibold justify-center items-center h-full">
+            {navLinks.map(({ to, label }) => (
+              <li key={to}>
+                <ScrollLink
+                  to={to}
+                  smooth={true}
+                  duration={800}
+                  
+                  spy={true}
+                  onClick={closeMenu}
+                  className="hover:text-blue-400 transition duration-300 cursor-pointer"
+                >
+                  {label}
+                </ScrollLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      {/* Scroll to Top Button */}
+      {showScrollToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-5 right-5 p-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-400 transition duration-300 z-40"
+          aria-label="Scroll to top"
+        >
+          <FaArrowUp size={20} />
+        </button>
+      )}
+    </>
   );
 }
 

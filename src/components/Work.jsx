@@ -1,176 +1,210 @@
+import FadeIn from "../components/FadeIn";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-import { FaGithub, FaExternalLinkAlt, FaFolder } from "react-icons/fa";
 import MentorMate from "../assets/Work/mentor.png";
 import excel from "../assets/Work/excelConverter.png";
 import igraliste from "../assets/Work/igraliste.png";
-import buekom from "../assets/Work/Buekom.png";
+import Smilja from "../assets/Work/Smilja.png";
+import Bundesliga from "../assets/Work/Bundesliga.png";
+import Jobs from "../assets/Work/JobsAnalyse.png";
+import Properties from "../assets/Work/Properties.png";
 
-
-const projects = [
+const webProjects = [
   {
-    name: "Your Mentor Mate",
-    backgroundImage: MentorMate, 
-    description:
-      "A mentoring platform with integrated payment and video call options to facilitate seamless mentor-mentee connections.",
-    technologies: ["React", "CSS", "Tailwind", "Node.js", "Express.js"],
-    socialLinks: [
-      {
-        href: "https://github.com/orgs/final-project-24/repositories",
-        label: "GitHub Repository",
-        icon: <FaGithub size={25} />,
-      },
-      {
-        href: "https://mentor-mate-frontend.onrender.com/",
-        label: "Visit MentorMate",
-        icon: <FaExternalLinkAlt size={25} />,
-      },
-    ],
+    name: "Psiholog Smilja Igic",
+    shortDescription: "Fully responsive psychologist website built with Next.js and optimized for SEO.",
+    description: `• Designed and developed a fully responsive website for a licensed psychologist
+• Built using Next.js, Tailwind CSS, and JavaScript
+• Implemented clean and accessible UI/UX with a focus on clarity and trust
+• Deployed via Vercel with optimized SEO and performance settings
+• Includes dynamic routing, contact form, and structured content sections`,
+    technologies: ["Next.js", "Tailwind CSS", "JavaScript"],
+    backgroundImage: Smilja,
+    link: "https://psiholog-smilja-igic.vercel.app/",
+    github: "https://github.com/Milos191405/psiholog-smilja"
   },
   {
-    name: "Buekom Help Center",
-    backgroundImage: buekom, 
-    description:
-      "Internal application for company Buekom to help employees with their Markdown files which they are using almost every day. Their is option that they can make admin or guest accounts and manage files. Backend is made with Node.js and Express.js and frontend with React.", 
-      
-    technologies: ["React", "Tailwind", "Node.js", "Express.js"],
-    socialLinks: [
-      {
-        href: "https://github.com/Milos191405/buekom-help-center",
-        label: "GitHub Repository",
-        icon: <FaGithub size={25} />,
-      },
-      {
-        href: "https://buekom-help-center.onrender.com//",
-        label: "Visit Buekom help center",
-        icon: <FaExternalLinkAlt size={25} />,
-      },
-    ],
+    name: "YourMentorMate",
+    shortDescription: "Mentoring platform with role-based auth, booking, and payment integration.",
+    description: `• Built with React (Vite), TypeScript, CSS, and Tailwind CSS
+• Developed a mentoring platform for mentors and mentees
+• Implemented role-based authentication, calendar booking, and secure payments
+• Users receive automatic video call links upon booking
+• Focused on responsive design and intuitive UI/UX
+• Fully deployed but no longer actively maintained`,
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    backgroundImage: MentorMate,
+    link: "https://mentor-mate-frontend.onrender.com/",
+    github: "https://github.com/Milos191405/mentor-mate"
   },
   {
-    name: "Excel Converter",
-    backgroundImage: excel, 
-    description:
-      "A simple web app that helps users sort data from Excel files. Automatically generates columns and offers sorting options. Backend integration is planned for data persistence.",
-    technologies: ["React", "Tailwind"],
-    socialLinks: [
-      {
-        href: "https://github.com/Milos191405/Excel-converter",
-        label: "GitHub Repository",
-        icon: <FaGithub size={25} />,
-      },
-      {
-        href: "https://excel-converter-xlm9.onrender.com/",
-        label: "Visit Excel Converter",
-        icon: <FaExternalLinkAlt size={25} />,
-      },
-    ],
-  },
-  {
-    name: "Igraonica Igraliste",
-    backgroundImage: igraliste, 
-    description:
-      "A vibrant website for a children's playground in Serbia, designed to highlight its playful atmosphere and services. I am in the process of rewriting the entire codebase from WordPress to React, with plans to introduce new features in the future to enhance the site's functionality.",
-    technologies: ["React", "Tailwind", "CSS"],
-
-    socialLinks: [
-      {
-        href: "https://github.com/Milos191405/Igraliste",
-        label: "GitHub Repository",
-        icon: <FaGithub size={25} />,
-      },
-      {
-        href: "https://igraliste.onrender.com/",
-        label: "Visit Igraonica Igraliste",
-        icon: <FaExternalLinkAlt size={25} />,
-      },
-    ],
-  },
+    name: "Igraliste",
+    shortDescription: "Playground site migrated from WordPress to modular React.",
+    description: `• Migrated an existing WordPress site for a children's playroom
+• Goal: make content like blogs and events easier to manage
+• Rebuilt layout with reusable components and Tailwind styling
+• Focused on structure, content separation, and scalability
+• Blog functionality planned for future updates
+• Considering transition to Next.js for static generation and SEO`,
+    technologies: ["React", "Tailwind CSS"],
+    backgroundImage: igraliste,
+    link: "https://igraliste.onrender.com/",
+    github: "https://github.com/Milos191405/igraliste"
+  }
 ];
-function Work() {
-  return (
-    <div
-      id="work"
-      className="pt-14  min-h-screen bg-[#0a192f] text-gray-300  items-center px-6"
+
+const dataProjects = [
+  {
+    name: "Bundesliga 2023/24 Analysis",
+    shortDescription: "SQL-based team performance analysis with clustering and insights.",
+    description: `• Analyzed Bundesliga 2023/24 performance using SQL
+• Correlated metrics like shots, goals, and possession
+• Clustered team data by playing style and efficiency
+• Generated ranking and prediction insights
+• Built scatter plots and heatmaps for comparison`,
+    technologies: ["SQL", "Data Analysis"],
+    backgroundImage: Bundesliga,
+    link: "#",
+    github: "https://github.com/Milos191405/Bundesliga-2023-2024"
+  },
+  {
+    name: "Job Market SQL Analysis",
+    shortDescription: "SQL analysis of 700k+ job posts to uncover salary and skill trends.",
+    description: `• Analyzed 700,000+ job postings in 2023 using SQL
+• Focused on salary, remote work, and degree requirements
+• Identified top-paying roles and key required skills
+• Explored trends in work-from-home and hybrid setups
+• Visualized results via pie charts and bar graphs`,
+    technologies: ["SQL", "Data Analysis"],
+    backgroundImage: Jobs,
+    link: "#",
+    github: "https://github.com/Milos191405/SQL-Job-Analyse"
+  },
+  {
+    name: "House Sales Analysis",
+    shortDescription: "EDA on King County housing data using Python and visual tools.",
+    description: `• Used Python (pandas, numpy, matplotlib, seaborn) for EDA
+• Explored price gaps between waterfront and non-waterfront homes
+• Assessed renovation impact and build year on pricing
+• Mapped affordability by postal code
+• Cleaned missing values and handled outliers`,
+    technologies: ["Python", "Pandas", "Matplotlib"],
+    backgroundImage: Properties,
+    link: "#",
+    github: "https://github.com/Milos191405/Python-House-properties"
+  }
+];
+
+const ProjectCard = ({ project, delay }) => (
+  <FadeIn delay={delay}>
+    <motion.div
+      className="relative group rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay }}
     >
-      {/* container */}
-      <div className="max-w-[1000px] flex flex-col justify-center w-full h-full md:max-w-[700px] xl:max-w-[1200px] md:mx-auto">
-        <div className="">
-          <p className="text-xl md:text-2xl xl:text-4xl font-bold  text-grey-300 inline border-b-2  border-blue-600">
-            Work
-          </p>
-          <p className=" py-4 md:text-lg xl:text-2xl">Check out some of my recent work</p>
+      {/* Image with hover overlay */}
+      <div
+        className="relative h-[px] md:h-[300px] md:max-w-[700px]  xl:max-w-[1200px] bg-cover bg-center transition-transform duration-500 group-hover:scale-105 "
+        style={{ backgroundImage: `url(${project.backgroundImage})` }}
+      >
+        <div className="absolute  inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 px-6 py-4 overflow-y-auto flex flex-col justify-center">
+          <ul className="text-sm md:text-base text-gray-300 text-left list-disc list-inside space-y-1">
+            {project.description.split("\n").map((line, i) => (
+              <li key={i}>{line.replace(/^•\s*/, "")}</li>
+            ))}
+          </ul>
         </div>
-
-        {projects.map((project, index) => (
-          <article
-            key={index}
-            id="work"
-            className="relative  mb-10 mt-8 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1500px] lg:  lg:grid lg:grid-cols-12"
-          >
-            {/* First div (Background Image) */}
-            <div
-              className="absolute top-0 left-0 right-0 bottom-0 opacity-10 bg-cover h-full w-full hover:opacity-60 lg:col-start-1 lg:col-end-7"
-              style={{
-                backgroundImage: `url(${project.backgroundImage})`, // Set dynamic background image
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            >
-              {/* Optional fallback image in case image fails */}
-              <img
-                src={project.backgroundImage}
-                alt={project.name}
-                className="h-[100%] invisible"
-              />
-            </div>
-            {/* Second div (Content) */}
-            <div
-              className="relative flex justify-center items-center h-full w-full z-10 lg:col-start-6 lg:col-end-13 lg:px-3  "
-            >
-              <div className="flex flex-col text-white  px-3  lg:px-0 h-[100%] lg:text-end ">
-                <p className="text-text-secondary md:text-lg xl:text-xl  pt-2">
-                  Featured Project
-                </p>
-                <h3 className="text-lg md:text-xl xl:text-2xl font-bold text-white  pt-3 hover:text-text-secondary cursor-pointer">
-                  {project.name}
-                </h3>
-                <p className="pt-5 text-text-primary md:text-lg xl:text-xl">
-                  {project.description}
-                </p>
-
-                {/* Technologies List */}
-                <ul className="flex flex-wrap mt-5 w-[100%] text-text-secondary justify-end  ">
-                  {project.technologies.map((tech, techIndex) => (
-                    <li key={techIndex} className="text-sm mr-3 xl:ml-3 md:text-lg  ">
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Social Links */}
-                <div className="flex space-x-1 pt-5 lg:justify-end ">
-                  {project.socialLinks.map(
-                    ({ href, label, icon }, linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={label}
-                        className="flex p-1 pb-5 text-text-primary   hover:scale-105 transition-transform duration-300"
-                      >
-                        {icon}
-                      </a>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          </article>
-        ))}
       </div>
-    </div>
+
+      {/* Static Content */}
+      <div className="bg-[#0a192f] p-5 md:p-6 h-[200px] flex flex-col justify-between border border-gray-700 rounded-md">
+        <h4 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+          {project.name}
+        </h4>
+        <p className="text-sm md:text-base text-gray-300 mb-2">
+          {project.shortDescription}
+        </p>
+        <ul className="flex flex-wrap gap-2 text-xs md:text-sm text-blue-300">
+          {project.technologies.map((tech, index) => (
+            <li key={index}>{tech}</li>
+          ))}
+        </ul>
+        <div className="flex gap-4 mt-4">
+          {project.link && project.link !== "#" && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-400 transition"
+              aria-label="Live Project"
+            >
+              <FaExternalLinkAlt size={20} />
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-400 transition"
+              aria-label="GitHub Repository"
+            >
+              <FaGithub size={20} />
+            </a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  </FadeIn>
+);
+
+const Work = ({ isNavOpen }) => {
+  return (
+    <section
+      id="work"
+      className={`w-full ${
+        isNavOpen ? "min-h-[calc(100vh-80px)]" : "min-h-screen"
+      } bg-[#0a192f] text-gray-300 px-6 pt-20`}
+    >
+      <div className="max-w-[1200px] mx-auto flex flex-col items-center md:max-w-[700px]  xl:max-w-[1200px]">
+        <FadeIn>
+          <header className="text-center mb-12">
+            <h2 className="text-4xl font-bold inline border-b-4 border-blue-600 mb-4">
+              Work
+            </h2>
+            <p className="text-lg mt-4">Explore my recent projects</p>
+          </header>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-start">
+          <div className="flex flex-col gap-10">
+            <FadeIn>
+              <h3 className="text-2xl font-semibold text-blue-400 mb-6">
+                🖥️ Web Development Projects
+              </h3>
+            </FadeIn>
+            {webProjects.map((project, index) => (
+              <ProjectCard project={project} key={index} delay={index * 0.2} />
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-10">
+            <FadeIn>
+              <h3 className="text-2xl font-semibold text-blue-400 mb-6">
+                📊 Data Analysis Projects
+              </h3>
+            </FadeIn>
+            {dataProjects.map((project, index) => (
+              <ProjectCard project={project} key={index} delay={index * 0.2} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default Work;
