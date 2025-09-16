@@ -1,47 +1,26 @@
+import { useState } from "react";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaLinkedin, FaGithub, FaCertificate, FaXing } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 const socialLinks = [
-  {
-    href: "https://www.linkedin.com/in/milos-mirkovic-7976726b/",
-    label: "LinkedIn",
-    icon: <FaLinkedin size={30} />,
-  },
-  {
-    href: "https://www.xing.com/profile/Milos_Mirkovic090474",
-    label: "Xing",
-    icon: <FaXing size={24} />,
-  },
-  {
-    href: "https://github.com/Milos191405",
-    label: "GitHub",
-    icon: <FaGithub size={30} />,
-  },
-  {
-    href: "mailto:milos.mirkovic7@gmail.com",
-    label: "Email",
-    icon: <HiOutlineMail size={30} />,
-  },
-  {
-    href: "/Milos Mirkovic CV.pdf",
-    label: "Resume",
-    icon: <BsFillPersonLinesFill size={30} />,
-    download: true,
-  },
-  {
-    href: "/Zertifikat DCI.pdf",
-    label: "Certificates",
-    icon: <FaCertificate size={30} />,
-  },
+  { href: "https://www.linkedin.com/in/milos-mirkovic-7976726b/", label: "LinkedIn", icon: <FaLinkedin size={30} /> },
+  { href: "https://www.xing.com/profile/Milos_Mirkovic090474", label: "Xing", icon: <FaXing size={24} /> },
+  { href: "https://github.com/Milos191405", label: "GitHub", icon: <FaGithub size={30} /> },
+  { href: "mailto:milos.mirkovic7@gmail.com", label: "Email", icon: <HiOutlineMail size={30} /> },
+  { href: "/Milos Mirkovic CV.pdf", label: "Resume", icon: <BsFillPersonLinesFill size={30} />, download: true },
+];
+
+const certificates = [
+  { label: "Web Development", href: "/Zertifikat DCI.pdf" },
+  { label: "Data Analyst", href: "/Data Analyst.pdf" },
 ];
 
 function Contact() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
-    <section
-      id="contact"
-      className="w-full bg-[#0a192f] text-gray-300 px-6 pt-20"
-    >
+    <section id="contact" className="w-full bg-[#0a192f] text-gray-300 px-6 pt-20 relative">
       <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center">
         <h2 className="text-4xl font-bold border-b-4 border-blue-600 mb-8">
           Contact
@@ -59,6 +38,7 @@ function Contact() {
           Write Me
         </a>
 
+        {/* Social ikonice i sertifikati */}
         <div className="flex flex-wrap justify-center gap-6 mt-10">
           {socialLinks.map(({ href, label, icon, download }) => (
             <a
@@ -73,6 +53,36 @@ function Contact() {
               {icon}
             </a>
           ))}
+
+          {/* Sertifikati dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button
+              className="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition duration-300"
+              aria-label="Certificates"
+            >
+              <FaCertificate size={30} />
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute bottom-10  mt-10 flex flex-col gap-2 bg-bg-primary text-white p-2 rounded shadow-lg z-50 pointer-events-auto w-48">
+                {certificates.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-400"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <p className="text-gray-500 text-sm mt-10">
