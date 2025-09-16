@@ -24,12 +24,12 @@ const socialLinks = [
     icon: <HiOutlineMail size={24} />,
   },
   {
-    href: "",
+    href: "/Milos Mirkovic CV.pdf",
     label: "Resume",
     icon: <BsFillPersonLinesFill size={24} />,
   },
   {
-    href: "/CertificateDCI.pdf",
+    href: "/Zertifikat DCI.pdf",
     label: "Certificates",
     icon: <FaCertificate size={24} />,
   },

@@ -30,7 +30,7 @@ const socialLinks = [
     download: true,
   },
   {
-    href: "/CertificateDCI.pdf",
+    href: "/Zertifikat DCI.pdf",
     label: "Certificates",
     icon: <FaCertificate size={30} />,
   },
@@ -68,7 +68,7 @@ function Contact() {
               rel="noopener noreferrer"
               aria-label={label}
               download={download ? true : undefined}
-              className="text-gray-300 hover:text-blue-400 transform hover:scale-110 transition duration-300"
+              className="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition duration-300"
             >
               {icon}
             </a>
