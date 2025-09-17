@@ -59,7 +59,7 @@ function Contact() {
             className="relative"
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
-          >
+          > Certificates
             <button
               className="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition duration-300"
               aria-label="Certificates"

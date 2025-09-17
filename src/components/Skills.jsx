@@ -3,7 +3,7 @@ import FadeIn from "../components/FadeIn";
 const skillSections = [
   {
     title: "Frontend Development",
-    skills: "HTML5 • CSS3 • JavaScript (ES6+) • React.js • Next.js • Tailwind CSS • Bootstrap",
+    skills: "HTML5 • CSS3 • JavaScript (ES6+) • React.js • Next.js • Tailwind CSS",
   },
   {
     title: "Backend Development & Tools",
