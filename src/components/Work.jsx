@@ -22,7 +22,7 @@ const webProjects = [
     technologies: ["Next.js", "Tailwind CSS", "JavaScript"],
     backgroundImage: Smilja,
     link: "https://psiholog-smilja-igic.vercel.app/",
-    github: "https://github.com/Milos191405/psiholog-smilja"
+    github: "https://github.com/Milos191405/psiholog_smilja_igic"
   },
   {
     name: "YourMentorMate",
@@ -99,7 +99,7 @@ const dataProjects = [
 const ProjectCard = ({ project, delay }) => (
   <FadeIn delay={delay}>
     <motion.div
-      className="relative group rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+      className=" relative group rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -110,13 +110,14 @@ const ProjectCard = ({ project, delay }) => (
         className="relative h-[px] md:h-[300px] md:max-w-[700px]  xl:max-w-[1200px] bg-cover bg-center transition-transform duration-500 group-hover:scale-105 "
         style={{ backgroundImage: `url(${project.backgroundImage})` }}
       >
-        <div className="absolute  inset-0 bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500 px-6 py-4 overflow-y-auto flex flex-col justify-center">
-          <ul className="text-sm md:text-base text-gray-300 text-left list-disc list-inside space-y-1">
-            {project.description.split("\n").map((line, i) => (
-              <li key={i}>{line.replace(/^•\s*/, "")}</li>
-            ))}
-          </ul>
-        </div>
+       <div className="hidden lg:absolute lg:inset-0 lg:bg-black/80 lg:backdrop-blur-sm lg:opacity-0 lg:group-hover:opacity-100 lg:transition lg:duration-500 lg:px-6 lg:py-4 lg:overflow-y-auto lg:flex lg:flex-col lg:justify-center">
+  <ul className="text-sm md:text-base text-gray-300 text-left list-disc list-inside space-y-1">
+    {project.description.split("\n").map((line, i) => (
+      <li key={i}>{line.replace(/^•\s*/, "")}</li>
+    ))}
+  </ul>
+</div>
+
       </div>
 
       {/* Static Content */}

@@ -7,8 +7,8 @@ function Home({ isNavOpen }) {
     <section
       id="home"
       className={`w-full ${
-        isNavOpen ? "min-h-[calc(100vh-80px)]" : "min-h-screen"
-      } bg-bg-primary flex items-center justify-center px-4 sm:px-6 md:px-8`}
+        isNavOpen ? "min-h-[calc(100vh-80px) pt-40]" : "min-h-screen"
+      } bg-bg-primary flex items-center justify-center pt-10 px-4 pb-4  md:px-8`}
       aria-labelledby="home-heading"
     >
       <div className="w-full pt-[80px] md:max-w-[700px] xl:max-w-[1200px] flex flex-col justify-center items-start text-header">

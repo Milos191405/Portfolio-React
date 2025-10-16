@@ -40,7 +40,7 @@ function SocialSidebar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <div className="hidden lg:flex fixed flex-col top-[35%] left-5">
+    <div className="hidden lg:flex fixed flex-col top-[35%] left-5 z-[80]">
       <div className="flex flex-col gap-4">
         {socialLinks.map(({ href, label, icon }) => (
           <a

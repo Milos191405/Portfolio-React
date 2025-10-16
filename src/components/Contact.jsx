@@ -20,8 +20,8 @@ function Contact() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <section id="contact" className="w-full bg-[#0a192f] text-gray-300 px-6 pt-20 relative">
-      <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center">
+    <section id="contact" className="w-full bg-[#0a192f] text-gray-300 px-6 pt-20">
+      <div className="max-w-[1200px] md:max-w-[700px] xl:max-w-[1200px] mx-auto flex flex-col items-center text-center ">
         <h2 className="text-4xl font-bold border-b-4 border-blue-600 mb-8">
           Contact
         </h2>
@@ -56,10 +56,10 @@ function Contact() {
 
           {/* Sertifikati dropdown */}
           <div
-            className="relative"
+            className="relative "
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
-          > Certificates
+          >
             <button
               className="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition duration-300"
               aria-label="Certificates"
