@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 import MentorMate from "../assets/Work/mentor.png";
-import excel from "../assets/Work/excelConverter.png";
+// import excel from "../assets/Work/excelConverter.png";
 import igraliste from "../assets/Work/igraliste.png";
 import Smilja from "../assets/Work/Smilja.png";
 import Bundesliga from "../assets/Work/Bundesliga.png";
@@ -66,7 +66,7 @@ const dataProjects = [
     technologies: ["SQL", "Data Analysis"],
     backgroundImage: Bundesliga,
     link: "#",
-    github: "https://github.com/Milos191405/Bundesliga-2023-2024"
+    github: "https://github.com/Milos191405/Bundesliga-2023-2024/blob/master/README.md"
   },
   {
     name: "Job Market SQL Analysis",
@@ -79,7 +79,7 @@ const dataProjects = [
     technologies: ["SQL", "Data Analysis"],
     backgroundImage: Jobs,
     link: "#",
-    github: "https://github.com/Milos191405/SQL-Job-Analyse"
+    github: "https://github.com/Milos191405/SQL-Job-Analyse/blob/main/README.md"
   },
   {
     name: "House Sales Analysis",
@@ -92,47 +92,66 @@ const dataProjects = [
     technologies: ["Python", "Pandas", "Matplotlib"],
     backgroundImage: Properties,
     link: "#",
-    github: "https://github.com/Milos191405/Python-House-properties"
+    github: "https://github.com/Milos191405/Python-House-properties/blob/main/README.md"
   }
 ];
 
 const ProjectCard = ({ project, delay }) => (
   <FadeIn delay={delay}>
     <motion.div
-      className=" relative group rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
+      className="relative group rounded-lg shadow-lg overflow-hidden h-full flex flex-col"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1, delay }}
     >
-      {/* Image with hover overlay */}
-      <div
-        className="relative h-[px] md:h-[300px] md:max-w-[700px]  xl:max-w-[1200px] bg-cover bg-center transition-transform duration-500 group-hover:scale-105 "
-        style={{ backgroundImage: `url(${project.backgroundImage})` }}
+      {/* Slika (klikabilna) */}
+      <a
+        href={project.link && project.link !== "#" ? project.link : project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
       >
-       <div className="hidden lg:absolute lg:inset-0 lg:bg-black/80 lg:backdrop-blur-sm lg:opacity-0 lg:group-hover:opacity-100 lg:transition lg:duration-500 lg:px-6 lg:py-4 lg:overflow-y-auto lg:flex lg:flex-col lg:justify-center">
-  <ul className="text-sm md:text-base text-gray-300 text-left list-disc list-inside space-y-1">
-    {project.description.split("\n").map((line, i) => (
-      <li key={i}>{line.replace(/^•\s*/, "")}</li>
-    ))}
-  </ul>
-</div>
+        <div
+          className="relative h-[200px] md:h-[300px] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+          style={{ backgroundImage: `url(${project.backgroundImage})` }}
+        >
+          {/* Hover overlay sa opisom */}
+          <div className="hidden lg:absolute lg:inset-0 lg:bg-black/80 lg:backdrop-blur-sm lg:opacity-0 lg:group-hover:opacity-100 lg:transition lg:duration-500 lg:px-6 lg:py-4 lg:overflow-y-auto lg:flex lg:flex-col lg:justify-center">
+            <ul className="text-sm md:text-base text-gray-300 text-left list-disc list-inside space-y-1">
+              {project.description.split("\n").map((line, i) => (
+                <li key={i}>{line.replace(/^•\s*/, "")}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </a>
 
-      </div>
-
-      {/* Static Content */}
+      {/* Donji sadržaj */}
       <div className="bg-[#0a192f] p-5 md:p-6 h-[200px] flex flex-col justify-between border border-gray-700 rounded-md">
-        <h4 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
-          {project.name}
-        </h4>
+        {/* Naslov (klikabilan) */}
+        <a
+          href={project.link && project.link !== "#" ? project.link : project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-blue-400 transition-colors"
+        >
+          <h4 className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+            {project.name}
+          </h4>
+        </a>
+
         <p className="text-sm md:text-base text-gray-300 mb-2">
           {project.shortDescription}
         </p>
+
         <ul className="flex flex-wrap gap-2 text-xs md:text-sm text-blue-300">
           {project.technologies.map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}
         </ul>
+
+        {/* Ikonice */}
         <div className="flex gap-4 mt-4">
           {project.link && project.link !== "#" && (
             <a
